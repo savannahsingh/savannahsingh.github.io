@@ -5,6 +5,7 @@ var slider;
 function setup() {
 
 
+
   slider = createSlider(0, 360, 180, 40);
   slider.position(260, 610);
   slider.style('width', '80px');
