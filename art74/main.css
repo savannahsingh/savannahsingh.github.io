@@ -1,0 +1,24 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+
+  font-family: "Century Gothic";
+  line-height: 1.5;
+  padding: 30px 20px;
+  text-align: center;
+  background-color: rgb(240, 240, 240)" margin: 0 auto; max-width:50em";
+}
+
+h1 {
+  padding: 20px 0px 10px 0px;
+  font-family: "Century Gothic"
+    text-align: center;
+}
+
+p {
+  font-family: "Century Gothic";
+  text-align: center;
+}
