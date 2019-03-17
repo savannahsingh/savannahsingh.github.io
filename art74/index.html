@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
 <head>
   <title>Revenge of the Corg</title>
 
-  <link rel="stylesheet" type="text/css" href="main.css">
   <link rel="apple-touch-icon" sizes="180x180" href="asset/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="asset/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="asset/favicon-16x16.png">
@@ -13,26 +10,44 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
 </head>
+<style>
+p {
+  font-family: "Century Gothic";
+  text-align: center;
+}
 
+h1 {
+  text-align: center;
+  font-family: "Century Gothic";
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  align-items: stretch;
+  justify-items: stretch;
+  }
+.grid a {
 
-<body>
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  max-width: 100%;
+}
 
-  <h1>Adopt a Pet!</h1>
-  <p>
-    <align= "center"> Choose a pet to follow on its journey.
-  </p>
-  <p><a href="page2.html"><img src="asset/bowtie.jpg" style=width="640" height="600">
-    </a>
-    <a href="page3.html">
-      <img src="asset/angrycorg.jpg" style=width="640" height="600">
-    </a>
-    <a href="page4.html"><img src="asset/kitty.jpg" style=width="640" height="600">
-    </a>
-    <img src="asset/goldie.jpg" style=width="640" height="600"></p>
+.grid a img{
+  height: auto;
+  max-width: 100%;
+  position: relative;
+}
 
+</style>
 
-
-
-</body>
-
-</html>
+<h1>Adopt a Pet!</h1>
+<p>
+  <align= "right"> Choose a pet to follow on its journey.
+</p>
+<main class="grid">
+  <a href="page2.html"><img src="asset/bowtie.jpg" alt="Sample photo"></a>
+  <a href="page3.html"><img src="asset/angrycorg.jpg" alt="Sample photo"></a>
+  <a href="page4.html"><img src="asset/kitty.jpg" alt="Sample photo"></a>
+  <a href="page5.html"><img src="asset/goldie.jpg" alt="Sample photo"></a>
+</main>

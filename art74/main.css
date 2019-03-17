@@ -1,6 +1,8 @@
 html, body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
 body {
@@ -10,6 +12,7 @@ body {
   padding: 30px 20px;
   text-align: center;
   background-color: rgb(240, 240, 240)" margin: 0 auto; max-width:50em";
+
 }
 
 h1 {
@@ -21,4 +24,15 @@ h1 {
 p {
   font-family: "Century Gothic";
   text-align: center;
+}
+
+
+.button {
+  display: block;
+  position: absolute;   
+}
+
+
+.hover img:hover {
+  opacity: 0.5;
 }
