@@ -27,7 +27,8 @@
       border: 1px solid #ccc;
       float: left;
       width: 350px;
-      height: 380px;
+      height: 475px;
+      /* original height 380px */
     }
 
     div.gallery:hover {
@@ -86,14 +87,41 @@
         display: table;
         clear: both;
       }
+      ul {
+  list-style-type: none;
+  margin: -20px;
+  padding: -10px;
+  overflow: hidden;
+  background-color: rgb(50, 50, 50);
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: rgb(215, 0, 75);
+}
   </style>
 </head>
 
-<body style="background-color:rgb(220, 220, 255)">
+<body style="background-color:rgb(255, 230, 255)">
+  <ul>
+  <li><a class="active" href="index.html">Savannah Singh</a></li>
+  <li><a href="statement.html">Artist Statement</a></li>
+  <li><a href="">Contact</a></li>
+</ul>
   <div class="title">
     <p style="font-size:300%";>Savannah Singh</p>
-    <p><a target= "_blank" href="statement.html">
-      Artist Statement</a></p>
+
   </div>
   <br>
   <p>
@@ -106,23 +134,23 @@
 
     <div class="gallery">
       <a target="_blank" href="img_forest.jpg">
-        <img src="assets/pikaprint.jpg" alt="Pikachu">
+        <img src="assets/alexis.jpg" alt="Portrait">
       </a>
-      <div class="desc">Pikachu 3D Print</div>
+      <div class="desc">Digital Portrait: Alexis</div>
     </div>
 
     <div class="gallery">
       <a target="_blank" href="/project_4/index.html">
-        <img src="assets/art75p4.jpg" alt="Net Art">
+        <img src="assets/vidhi.jpg" alt="Portrait">
       </a>
-      <div class="desc">Location Gone Wrong</div>
+      <div class="desc">Digital Portrait: Vidhi</div>
     </div>
 
     <div class="gallery">
       <a target="_blank" href="img_mountains.jpg">
-        <img src="assets/naturefade.jpg" alt="Glitch">
+        <img src="assets/syydney.jpg" alt="Portrait">
       </a>
-      <div class="desc">Nature Glitch</div>
+      <div class="desc">Digital Portrait: Sydney</div>
     </div>
   </p>
   <p>
@@ -130,28 +158,28 @@
       <a target="_blank" href="original.html">
         <img src="assets/tld/tld_title.jpg" alt="Dragon">
       </a>
-      <div class="desc">The Little Dragon</div>
+      <div class="desc">Short Story: The Little Dragon</div>
     </div>
 
     <div class="gallery">
       <a target="_blank" href="img_forest.jpg">
-        <img src="assets/nature1txt13.jpg" alt="Nature Glitch 2">
+        <img src="assets/captain_marvel.jpg" alt="Marvel Fanart">
       </a>
-      <div class="desc">Nature Glitch 2</div>
+      <div class="desc">Fan Art: Captain Marvel</div>
     </div>
 
     <div class="gallery">
       <a target="_blank" href="/project_4/index.html">
-        <img src="assets/spongebobmemethumb.jpg" alt="Meme Mashup">
+        <img src="assets/phioni.jpg" alt="Portrait">
       </a>
-      <div class="desc">Spongebob Meme Mashup</div>
+      <div class="desc">Phioni</div>
     </div>
 
     <div class="gallery">
       <a target="_blank" href="/art74/index.html">
-        <img src="/art74/asset/kitty.jpg" alt="Glitch">
+        <img src="assets/myherofantasy.jpg" alt="Glitch">
       </a>
-      <div class="desc">Adopt a Pet</div>
+      <div class="desc">Fan Art: My Hero Academia</div>
     </div>
   </p>
 </body>
