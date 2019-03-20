@@ -4,12 +4,12 @@ html, body {
 }
 
 body {
-  
+
   font-family: "Century Gothic";
   line-height: 1.5;
   padding: 30px 20px;
   text-align:
-    background-color: rgb(240, 240, 240)" margin: 0 auto; max-width:50em";
+    background-color: rgb(240, 240, 240)
 }
 
 h1 {
@@ -27,31 +27,10 @@ h3 {
   text-align: center;
 }
 p {
-  font-family: "";
+
   text-align: center;
 }
 
 canvas {
   display: block;
-}
-
-div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 180px;
-}
-
-div.gallery:hover {
-  border: 1px solid #777;
-}
-
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
 }
