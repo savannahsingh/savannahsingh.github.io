@@ -1,3 +1,9 @@
+<?php
+if($_POST["message"]) {
+    mail("savannahskethes.art@gmail.com", "Form to email message", $_POST["message"], "From: an@email.address");
+}
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -113,6 +119,22 @@
           <i class='fas fa-store' style='font-size:48px;color:rgb(215, 0, 75)'></i>
         </a>
 </div>
+<form action="contact.php" method="post">
+
+    <p>Name:</p>
+    <p><input type="text" name="name" value="Your name"></p>
+
+    <p>Email:</p>
+    <p><textarea name="email" value="Email"></textarea></p>
+    <!-- remember: 'type="text"' isn't actually necessary -->
+
+    <p>Comments: </p>
+    <p><textarea name="comments" rows="5" cols="20">Your comments</textarea></p>
+
+
+    <p><input type="submit"></p>
+
+</form>
 
 </body>
 
