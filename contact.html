@@ -1,8 +1,4 @@
-<?php
-if($_POST["message"]) {
-    mail("savannahskethes.art@gmail.com", "Form to email message", $_POST["message"], "From: an@email.address");
-}
-?>
+
 
 <!DOCTYPE html>
 <html>
@@ -29,6 +25,8 @@ if($_POST["message"]) {
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
   <style>
+.error {color: #FF0000;}
+
     .title {
       background-color: rgb(50, 50, 50);
       color: white;
@@ -78,10 +76,10 @@ if($_POST["message"]) {
     }
 
     .container {
-      text-align: left;
-      margin:30px;
-      width: auto;
-      height: 200px;
+      text-align: ;
+      margin:;
+      width: ;
+      height: ;
     }
 
   </style>
@@ -119,20 +117,16 @@ if($_POST["message"]) {
           <i class='fas fa-store' style='font-size:48px;color:rgb(215, 0, 75)'></i>
         </a>
 </div>
-<form action="contact.php" method="post">
+<br>
+<div class="container-fluid">
+<form action="mail.php" method="POST">
+<p>Name</p> <input type="text" name="name">
+<p>Email</p> <input type="text" name="email">
+<p>Message</p><textarea name="message" rows="6" cols="25"></textarea><br />
+<input type="submit" value="Send"><input type="reset" value="Clear">
+</form>
+</div>
 
-    <p>Name:</p>
-    <p><input type="text" name="name" value="Your name"></p>
-
-    <p>Email:</p>
-    <p><textarea name="email" value="Email"></textarea></p>
-    <!-- remember: 'type="text"' isn't actually necessary -->
-
-    <p>Comments: </p>
-    <p><textarea name="comments" rows="5" cols="20">Your comments</textarea></p>
-
-
-    <p><input type="submit"></p>
 
 </form>
 
