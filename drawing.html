@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Video</title>
+  <title>Drawing Application</title>
 
   <link rel="stylesheet" type="text/css" href="main.css">
 
@@ -15,10 +15,13 @@
   <meta name="theme-color" content="#ffffff">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <script language="javascript" type="text/javascript" src="drawingtool/libraries/p5.min.js"></script>
+  <script language="javascript" type="text/javascript" src="drawingtool/drawingtool.js"></script>
 
   <style>
     .title {
@@ -28,12 +31,23 @@
       padding: 20px;
     }
 
-    div.gallery {
+    div.container {
+      text-align: center;
       margin: 5px;
+      height: 500px;
+      width: 800px;
+      float: right;
+
+    }
+
+    div.gallery {
+      margin-left: 12.5%;
+      margin-right: 12.5%;
       border: 1px solid #ccc;
-      float: left;
-      width: 345px;
-      height: 380px;
+      float: ;
+      width: auto;
+      height: ;
+      /* original height 380px */
     }
 
     div.gallery:hover {
@@ -70,7 +84,6 @@
       box-sizing: border-box;
     }
 
-
     ul {
       list-style-type: none;
       margin: -20px;
@@ -95,6 +108,11 @@
       background-color: rgb(215, 0, 75);
       opacity: 1;
     }
+
+    canvas {
+    margin:auto;
+    border: 1px solid #ccc;
+    }
   </style>
 </head>
 
@@ -109,28 +127,26 @@
     <li><a href="contact.html">Contact</a></li>
   </ul>
   <div class="title">
-    <p style="font-size:300%" ;>Videos</p>
+    <p style="font-size:300%" ;>Drawing Tool</p>
 
   </div>
   <br>
-  <p>
-    <div class="container-fluid">
-    <div class="gallery">
-      <a href="excuses.html">
-        <img src="assets/video1.jpg" alt="video">
-      </a>
-      <div class="desc">Excuses</div>
-    </div>
+  <br>
+  <div class="container-fluid">
+    <p>Drawing Application, 2019 </p>
+    <p> Made with p5. </p>
+    <p> KEY </p>
+    <p> 1- Black pen <b>|</b> 2- Rainbow Brush <b>|</b> 3-Orange <b>|</b> 4- Blue Brush <b>|</b> 5- Ellipses <b>|</b> 6- Gray Pen <b>|</b> 7- Rainbow Triangles <b>|</b> 8- Circles <b>|</b> 9- Squares <b>|</b> 0- Rainbow Ellipse <b>|</b> e- Eraser <b>|</b> x- Clear <b>|</b> s-Save </p>
+  </div>
+<br>
+  <div class="canvas">
+
   </div>
 
-<div class="container-fluid">
-    <div class="gallery">
-      <a href="choices.html">
-        <img src="assets/video2.jpg" alt="video">
-      </a>
-      <div class="desc">Choices</div>
-    </div>
-    </div
+
+
+
+
 
 </body>
 
