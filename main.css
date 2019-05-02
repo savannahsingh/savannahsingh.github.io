@@ -33,3 +33,11 @@ p {
 canvas {
   display: block;
 }
+
+li {
+  font-family: "Century Gothic";
+}
+
+div.desc {
+  font-family: "Century Gothic";
+}
