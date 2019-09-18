@@ -2,17 +2,17 @@
 {
     margin: 0;
     padding: 0;
-    -moz-box-sizing: border-box; 
-    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 
 body{
-    background: #555;
+    background: rgb(255, 230, 255);
    /* color:#aaa;*/
     color:#d6d6d6;
-    
+
 }
 
 a:link {
@@ -74,9 +74,6 @@ p {
 }
 .navbar{
     width: 100%;
-    /*background: #ECECEC none repeat scroll 0% 0%;*/
-    /*border-bottom: 1px solid #DDD;
-    border-top: 1px solid #DDD;*/
 }
 .navbar-link {
     text-transform: uppercase;
@@ -215,7 +212,7 @@ code{
 .item_smallleft img.docpix, .item_largeright img.docpix {
     width: 300px;
     height: 260px;
-    
+
 }
 
 
@@ -233,7 +230,7 @@ code{
     padding: 5px;
     font-size:10px;
     font-style:oblique;
-    
+
     background-color: #656565;
     margin-bottom: 20px;
 }
@@ -247,8 +244,3 @@ code{
     margin-top: 20px;
     border: 1px dashed black;
 }
-
-
-
-
-
