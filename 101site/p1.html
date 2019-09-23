@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <!-- Basic Page Needs –––––––––––––––––––––––––––––––––––––––––– -->
@@ -11,11 +12,11 @@
   <!-- Mobile Specific Metas ––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- FONT ––––––––––––––––––––––––––––––––––––––––------–––––––– -->
+  <!-- FONT ––––––––––––––––––––––––––––––––––––––––-–––––––– -->
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
   <!-- CSS & JS –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script type="text/javascript"  src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
   <script type="text/javascript" src="css/overlaypopup.js"> </script>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
@@ -30,20 +31,21 @@
   <link rel="manifest" href="/assets/site.webmanifest">
 
 </head>
+
 <body>
 
-<!-- NAVIGATION AT the TOP is Here-->
+  <!-- NAVIGATION AT the TOP is Here-->
 
-<nav class="navbar">
-      <div class="container nav_pad">
-        <ul>
-         <li><a class="navbar-link" href="index.html">Main</a></li>
-         <li><a class="navbar-link" href="reading.html">Readings</a></li>
-         <li><a class="navbar-link" href="p1.html">Project 1</a></li>
-         <li><a class="navbar-link" href="p2.html">Project 2</a></li>
-        </ul>
-      </div>
-</nav>
+  <nav class="navbar">
+    <div class="container nav_pad">
+      <ul>
+        <li><a class="navbar-link" href="index.html">Main</a></li>
+        <li><a class="navbar-link" href="reading.html">Readings</a></li>
+        <li><a class="navbar-link" href="p1.html">Project 1</a></li>
+        <li><a class="navbar-link" href="p2.html">Project 2</a></li>
+      </ul>
+    </div>
+  </nav>
 
 
   <!-- Primary Page Layout
@@ -51,142 +53,391 @@
   <div class="container">
 
 
-   <div class="row section">
-  <header id="header" class="twelve columns">
-    <br>
-    <h2>Savannah Singh - Project 1</h3>
+    <div class="row section">
+      <header id="header" class="twelve columns">
+        <br>
+        <h2>Savannah Singh - Project 1</h3>
 
-<!-- <div class="statement_text">
+          <!-- <div class="statement_text">
 <em>
 Energy is neither created or destroyed it just moves around like a feral cat -- Albert  (put your own quote here)
 </em>
 <br>
 
 </div> -->
-<br>
-  </header>
+          <br>
+      </header>
+    </div>
+
+
+    <!-- NOTE!: For each row section make sure your column divs add up to 12. so 4+8, 6+6, 2+10, etc.-->
+
+    <!-- Start Row //// -->
+    <div class="row section">
+
+
+      <!-- The column for showing the image and the link-->
+
+      <div class="four columns">
+
+        <a href="video/sketch1animation.mp4"> <img src="images/sketch1img.png" class="u-full-width " /> </a>
+      </div>
+
+
+<div class="four columns">
+      <div class="scroll">
+        <pre>
+
+           String gridName = "Waffles";
+float rand = 255;
+float r = random(256);
+float a = 0.0;
+float inc = TWO_PI/5.0;
+int x = 0;
+
+void setup() {
+
+size(700, 700);
+stroke(255, 0, 0);
+frameRate(30);
+println(" The inc = " + inc);
+
+for (int i=0; i < height; i+=20) {
+  fill(0, 255, 0);
+  rect(0, i, width, 10);
+  fill(160, 10, 200);
+  rect(i, 0, 10, height);
+}
+stroke(200, 100, 50);
+for (int b = 5; b < 700; b += 5) {
+  if (b < 35) {
+    line( 30, r, 700, b );
+  } else {
+    line( 20, b, 700, r );
+  }
+}
+
+strokeWeight(7);
+stroke(0, 255, 255);
+for (int w=0; w< 700; w+=10) {
+  line(w, 300, w, 300+sin(a)*200.0);
+  println(" The angle = " + a + "The sin = " + sin(a));
+  a = a + inc;
+}
+}
+
+void draw() {
+
+for (int s = 0; s < 700; s += 20) {
+  for (int j = 0; j < 700; j += 20) {
+
+    noStroke();
+    fill(random(255), random(255), random(255), random(255));
+    ellipse( s, j, 10, 10 );
+    println(gridName + ", now has a fill value of " + random(255), random(255), random(255));
+
+    if (mousePressed) {
+      ellipse(s, j, 30, 30);
+    }
+  }
+}
+
+strokeWeight(1);
+stroke(255);
+fill(random(255));
+rect(mouseX, mouseY, 50, 50, random(255));
+
+if (mousePressed) {
+  strokeWeight(1);
+  stroke(255);
+  fill(random(255), random(255), random(255));
+  rect(mouseX, mouseY, 50, 50, random(255));
+}
+
+if (x < 500) {
+  line(x, 0, x, 100);
+  x = x + 3;
+} else {
+  noLoop();
+  exit();
+}
+      saveFrame("line-####.png");
+}
+         </pre>
+      </div>
+    </div>
+      <!-- The column for artist statement and the link-->
+      <div class="four columns">
+        <h5>Sketch 1</h5>
+        <p>
+          First sketch made in Processing. <br>
+          In this sketch, I was still getting used working with Processing and how different functions worked.
+        </p>
+        <!--  <a class="show-popup" href="#" data-showpopup="1" >run sketch</a> -->
+        <!-- <a href="video/sketch1animation.mp4">play video</a> <br>
+        <a href="code/p1ex1/p1ex1.txt">see code</a> <br> -->
+
+      </div>
+
+
+
+      <!--////  End of row section-->
+    </div>
+    <br>
+    <hr>
+    <br>
+
+    <!-- Start Row //// -->
+    <div class="row section">
+
+
+      <!-- The column for showing the image and the link-->
+
+      <div class="four columns">
+
+        <a href="video/line-00002.mp4"> <img src="images/sketch2img.png" class="u-full-width " /> </a>
+      </div>
+<div class="four columns">
+<div class="scroll">
+<pre>
+  int value = 0;
+
+  int tCounter = 0;
+
+  PImage b;
+
+  PFont f;
+
+  int x = 0;
+
+  void setup() {
+    size(800, 800);
+    noStroke();
+    rectMode(CENTER);
+
+    b = loadImage("2corgi.jpg");
+    image(b, 0, 0, width, height);
+  }
+
+
+
+
+  void draw() {
+
+    background(255-value);
+    fill(value);
+    ellipse(width/2, height/2, 400, 400);
+
+
+    fill(value);
+    rect(200, 400, 50, tCounter);
+
+      fill(value);
+    rect(600, 400, 50, tCounter);
+
+    for ( int value = 0; value < width; value += 32 ) {
+      fill(mouseX, mouseY, 100, 100);
+      rect(value, height/4, 20, height);
+      tint(255, 50);
+      image(b, mouseX, mouseY);
+    }
+
+
+
+    value++;
+
+    if ( value > 255) {
+      value = 0;
+    }
+
+    fill(value, 204);
+    rect(mouseX, height/2, mouseY/2+10, mouseY/2+5);
+    fill(value, 204);
+
+
+
+    //printArray(PFont.list());
+    f = createFont("Century Gothic", 48);
+    textFont(f);
+     if ( mousePressed && keyPressed == true )
+    fill(0, random(255), random(255));
+    text("Send Help", 120, tCounter);
+
+    tCounter ++;
+    if (tCounter > width) {
+      tCounter = -10;
+  }
+
+
+    fill(50, 30);
+    rect(0, 0, width, height);
+    textAlign(CENTER);
+    myDrawType("Hello", mouseX, 200);
+
+     circle(width*1, height*0.5, 200, 10);
+     circle(width*0, height*0.5, 200, 10);
+     circle(width*0.5, height*1, 200, 10);
+     circle(width*0.5, height*0, 200, 10);
+
+    if (x < 900) {
+      line(x, 0, x, 1);
+      x = x + 1;
+    } else {
+      noLoop();
+      exit();
+    }
+    saveFrame("line-#####.png");
+  }
+
+  void circle(float lox, float loy, int size, int x) {
+    float a = size/x;
+    for (int i = 0; i < x; i++) {
+      fill(random(255),random(255),random(255));
+      ellipse(lox, loy, size - i*a, size - i*a);
+    }
+
+  }
+
+  void keyPressed() {
+
+    if ( key == 'b' || key == 'B' ) {
+      // example of toggle logic
+      stroke(1);
+      strokeWeight(3);
+      line(mouseX, mouseY, pmouseX, pmouseY);
+    } else {
+      stroke(6);
+      strokeWeight(10);
+    }
+  }
+
+
+  void mouseMoved() {
+    value = value + 1;
+    if (value > 255) {
+      value = 0;
+    }
+  }
+
+
+       //void ssSign1(String ss , int locx, int loy) {
+       //  fill(120,50);
+       //  rect(locx,loy,300,50);
+       //  fill(34);
+       //  rect(locx-10,loy-10,300,50);
+       //  color k = color(0,255,255);
+       //  ssDrawText(ss,locx+5,loy+20,k);
+       //  ssRanGrcs(locx,loy,color(110,118,179,30));
+       //}
+
+         void ssDrawText(String s, int lx, int ly, color c ) {
+        fill(c);
+        text(s, lx, ly,20);
+      }
+
+      void ssRanGrcs(int lx, int ly, color c) {
+        fill(c);
+        float r = random(250);
+
+        for (int i= 0; i < 150; i++) {
+          ellipse(lx-r,ly-r,20,20);
+        }
+      }
+
+      void myDrawType(String s, int x, int y ) {
+    fill(255, 0, 0);
+    text(s, x, y);
+    fill(200);
+    rect(x, y, 5, 5);
+  }
+</pre>
+
+</div>
+</div>
+      <!-- The column for artist statement and the link-->
+      <div class="four columns">
+        <h5>Sketch 2</h5>
+        <p>
+          In this sketch, I made custom functions to create the rainbow circles on the edges of the video.
+        </p>
+        <!--  <a class="show-popup" href="#" data-showpopup="1" >run sketch</a> -->
+        <!-- <a href="video/sketch2animation.mp4">play video</a> <br>
+        <a href="code/p1ex2/p1ex2.txt">see code</a> <br> -->
+      </div>
+
+
+
+
+      <!--////  End of row section-->
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+
+    <div class="row section">
+
+
+      <!-- The column for showing the image and the link-->
+
+      <div class="four columns">
+
+        <a href="video/p1.mp4"> <img src="images/p1.png" class="u-full-width" /> </a>
+      </div>
+
+      <!-- The column for artist statement and the link-->
+      <div class="eight columns">
+        <h5>Project 1</h5>
+        <p>
+          artist statement artist statement artist statement artist statement artist statement
+          artist statement artist statement artist statement artist statement artist statement
+          artist statement artist statement artist statement artist statement artist statement
+          artist statement artist statement artist statement artist statement artist statement
+          artist statement artist statement artist statement artist statement artist statement
+          artist statement artist statement artist statement artist statement artist statement <br>
+        </p>
+        <!--  <a class="show-popup" href="#" data-showpopup="1" >run sketch</a> -->
+        <a href="video/p1.mp4">play video</a> <br>
+        <a href="code/p1/p1.txt">see code</a> <br>
+        <br>
+
+      </div>
+
+
+      <!--////  End of row section-->
+    </div>
+
+
+
+
+
+    <!-- end of MAIN container /////////////////-->
+
   </div>
 
 
-<!-- NOTE!: For each row section make sure your column divs add up to 12. so 4+8, 6+6, 2+10, etc.-->
-
-      <!-- Start Row //// -->
-      <div class="row section">
 
 
-       <!-- The column for showing the image and the link-->
+  <!-- ///////START of Overlay and pops for videos ///////////////////////////////////////////////////////////////// -->
 
-      <div class="four columns" >
+  <div class="overlay-bg"> </div>
 
-	    <a href="video/sketch1animation.mp4" > <img src="images/sketch1img.png" class="u-full-width "/>   </a>
-      </div>
-
-       <!-- The column for artist statement and the link-->
-     <div class="eight columns">
-         <h5>Sketch 1</h5>
-		<p>
-		First sketch made in Processing. <br>
-         In this sketch, I was still getting used working with Processing and how different functions worked.
-         </p>
-        <!--  <a class="show-popup" href="#" data-showpopup="1" >run sketch</a> -->
-         <a href="video/sketch1animation.mp4" >play video</a> <br>
-         <a href="code/p1ex1/p1ex1.txt">see code</a> <br>
-     </div>
-
-
-     <!--////  End of row section-->
-    </div>
-
-       <!-- Start Row //// -->
-      <div class="row section">
-
-
-       <!-- The column for showing the image and the link-->
-
-      <div class="four columns" >
-
-	    <a href="video/sketch2animation.mp4" > <img src="images/sketch2img.png" class="u-full-width "/>   </a>
-      </div>
-
-       <!-- The column for artist statement and the link-->
-     <div class="eight columns">
-         <h5>Sketch 2</h5>
-		<p>
-		(placeholder) ... In this sketch .... built-in functions: setup() draw()...shortcuts: ++, --, ...
-         </p>
-        <!--  <a class="show-popup" href="#" data-showpopup="1" >run sketch</a> -->
-         <a href="video/sketch2animation.mp4" >play video</a> <br>
-         <a href="code/p1ex2/p1ex2.txt">see code</a> <br>
-     </div>
-
-
-     <!--////  End of row section-->
-    </div>
-
-
-
-
-        <div class="row section">
-
-
-       <!-- The column for showing the image and the link-->
-
-      <div class="four columns" >
-
-	    <a href="video/p1.mp4" > <img src="images/p1.png" class="u-full-width"/>   </a>
-      </div>
-
-       <!-- The column for artist statement and the link-->
-     <div class="eight columns">
-         <h5>Project 1</h5>
-		<p>
-		artist statement artist statement artist statement artist statement artist statement
-        artist statement artist statement artist statement artist statement artist statement
-        artist statement artist statement artist statement artist statement artist statement
-        artist statement artist statement artist statement artist statement artist statement
-        artist statement artist statement artist statement artist statement artist statement
-        artist statement artist statement artist statement artist statement artist statement <br>
-         </p>
-        <!--  <a class="show-popup" href="#" data-showpopup="1" >run sketch</a> -->
-         <a href="video/p1.mp4" >play video</a> <br>
-         <a href="code/p1/p1.txt">see code</a> <br>
-<br>
-
-     </div>
-
-
-     <!--////  End of row section-->
-    </div>
-
-
-
-
-
-   <!-- end of MAIN container /////////////////-->
-
-  </div>
-
-
-
-
-	<!-- ///////START of Overlay and pops for videos ///////////////////////////////////////////////////////////////// -->
-
-<div class="overlay-bg"> </div>
-
-    <div class="overlay-content popup1">
+  <div class="overlay-content popup1">
 
     <!--   sketch content here///////////////// -->
 
 
     <button class="close-btn">X</button>
-</div>
+  </div>
 
-    <div class="overlay-content popup2">
+  <div class="overlay-content popup2">
 
-	  <!-- sketch content here/////////////////-->
+    <!-- sketch content here/////////////////-->
 
     <button class="close-btn">X</button>
-</div>
+  </div>
 
 </body>
+
 </html>
