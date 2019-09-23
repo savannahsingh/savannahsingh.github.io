@@ -10,19 +10,47 @@
 
 body{
     background: rgb(255, 230, 255);
+      font-family: "Century Gothic";
+
    /* color:#aaa;*/
     color:#d6d6d6;
 
 }
 
+ul {
+  list-style-type: none;
+  margin: -20px;
+  padding: -10px;
+  background-color: #450023;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #730039;
+  opacity: 1;
+}
+
+
 a:link {
-    color: #BB772D;
+    color: #FFD5FF;
     text-decoration: none;
 }
 
 a:visited {
     text-decoration: none;
-    color: #BB772D;
+    color: #FFD5FF;
 }
 a:hover {
     text-decoration: none;
@@ -121,9 +149,9 @@ code{
 
 
 .container {
-    width: 1200px;
+    width: 95%;
     margin: 0 auto;
-    background-color: #668;
+    background-color: #734767;
     box-sizing: border-box;
     padding: 0 40px;
 }
