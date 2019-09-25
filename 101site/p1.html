@@ -40,7 +40,7 @@
     <div class="container nav_pad">
       <ul>
         <li><a class="navbar-link" href="index.html">Main</a></li>
-        <li><a class="navbar-link" href="reading.html">Readings</a></li>
+        <li><a class="navbar-link" href="readings.html">Readings</a></li>
         <li><a class="navbar-link" href="p1.html">Project 1</a></li>
         <li><a class="navbar-link" href="p2.html">Project 2</a></li>
       </ul>
@@ -84,9 +84,9 @@ Energy is neither created or destroyed it just moves around like a feral cat -- 
       </div>
 
 
-<div class="four columns">
-      <div class="scroll">
-        <pre>
+      <div class="four columns">
+        <div class="scroll">
+          <pre>
 
            String gridName = "Waffles";
 float rand = 255;
@@ -164,14 +164,14 @@ if (x < 500) {
       saveFrame("line-####.png");
 }
          </pre>
+        </div>
       </div>
-    </div>
       <!-- The column for artist statement and the link-->
       <div class="four columns">
         <h5>Sketch 1</h5>
         <p>
           First sketch made in Processing. <br>
-          In this sketch, I was still getting used working with Processing and how different functions worked.
+          In this sketch, I was still getting used working with Processing and how different functions worked. I used the sin function and grid and added randomness to make the animation more colorful.
         </p>
         <!--  <a class="show-popup" href="#" data-showpopup="1" >run sketch</a> -->
         <!-- <a href="video/sketch1animation.mp4">play video</a> <br>
@@ -197,9 +197,9 @@ if (x < 500) {
 
         <a href="video/line-00002.mp4"> <img src="images/sketch2img.png" class="u-full-width " /> </a>
       </div>
-<div class="four columns">
-<div class="scroll">
-<pre>
+      <div class="four columns">
+        <div class="scroll">
+          <pre>
   int value = 0;
 
   int tCounter = 0;
@@ -352,13 +352,13 @@ if (x < 500) {
   }
 </pre>
 
-</div>
-</div>
+        </div>
+      </div>
       <!-- The column for artist statement and the link-->
       <div class="four columns">
         <h5>Sketch 2</h5>
         <p>
-          In this sketch, I made custom functions to create the rainbow circles on the edges of the video.
+          In this sketch, I made custom functions to create the rainbow circles on the edges of the video. I also added an image that fills the whole sketch. I also used text and played with different stroke weights.
         </p>
         <!--  <a class="show-popup" href="#" data-showpopup="1" >run sketch</a> -->
         <!-- <a href="video/sketch2animation.mp4">play video</a> <br>
@@ -383,23 +383,202 @@ if (x < 500) {
 
       <div class="four columns">
 
-        <a href="video/p1.mp4"> <img src="images/p1.png" class="u-full-width" /> </a>
+        <a href="video/project1animation.mp4"> <img src="images/ss_17482.png" class="u-full-width"> </a>
+      </div>
+
+      <div class="four columns">
+        <div class="scroll">
+          <pre>
+  int x = 0;
+
+  char currentkey = '1';
+
+  color bgc = color(255);
+
+  void setup() {
+
+  size(900, 900);
+  background(255);
+  smooth();
+  }
+
+  void draw() {
+
+
+  // triggering the clear_print function
+  if(keyPressed) {
+  clear_print();
+  }
+  // triggering the newkeychoice
+  if(mousePressed) {
+    drawChoice();
+  }
+
+    //if (x < 1000) {
+    //  line(x, 0, x, 1);
+    //  x = x + 1;
+    //} else {
+    //  noLoop();
+    //  exit();
+    //}
+    //      saveFrame("newline-####.jpg");
+  }
+
+
+  void drawChoice() {
+    // the key mapping if statemens that you can change to do anything you want.
+    // just make sure each key option has the a stroke or fill and then what type of
+    // graphic function
+
+
+   // key global variable contains whatever key was last pressed
+   char currentkey = key;
+
+  switch(currentkey) {
+  case '1':
+    println("1");  // black line
+
+    drawline(color(0), mouseX, mouseY, pmouseX, pmouseY);
+    break;
+  case '2':
+    //println("2");  // rainbow line
+    //strokeWeight(5);
+    //drawline(color(random(255),random(255),random(255),random(255)), mouseX, mouseY, pmouseX, pmouseY);
+      noStroke(); // blue circle
+      fill(0,0,random(255));
+      ellipse(mouseX, mouseY, 100, 100);
+    break;
+  case '3':
+    println("2");  // green circle
+    noStroke();
+      fill(0, random(255),0);
+      ellipse(mouseX, mouseY, 100, 100);
+      break;
+  case '4':
+   // println("2");  // red circle
+   //fill(random(255),random(255),random(255));
+   //   stroke(random(255), random(255), random(255));
+   //   triangle(mouseX, mouseY, 350, 350, 20, 20);
+   noStroke();
+   fill(random(255),0,0);
+   ellipse(mouseX,mouseY,100,100);
+    break;
+   case '5': // rainbow circle
+   //drawline(color(random(255)), mouseX, mouseY,pmouseX, pmouseY);
+    noStroke();
+   fill(random(255),random(255),random(255));
+   ellipse(mouseX, mouseY, 100,100);
+   break;
+   case '6': //grayscale circle
+   noStroke();
+   fill(random(255));
+   ellipse(mouseX, mouseY, 100,100);
+   break;
+   case '7':
+   strokeWeight(6);
+   drawline(color(random(255)), mouseX, mouseY,pmouseX, pmouseY);
+   break;
+   case '8':
+    strokeWeight(6);
+    drawline(color(random(255),0,0), mouseX, mouseY,pmouseX, pmouseY);
+    break;
+    case '9':
+     strokeWeight(6);
+     drawline(color (0,random(255),0), mouseX, mouseY,pmouseX, pmouseY);
+    break;
+    case '0':
+     strokeWeight(6);
+     drawline(color(0,0,(random(255))), mouseX, mouseY,pmouseX, pmouseY);
+     break;
+     case 'q':
+        strokeWeight(6);
+     drawline(color(random(255),random(255),random(255)), mouseX, mouseY,pmouseX, pmouseY);
+     break;
+     case 'w':
+     noStroke();
+     fill(random(255));
+     rect(mouseX,mouseY,10,10);
+     break;
+     case 'r':
+        noStroke();
+     fill(random(255),0,0);
+     rect(mouseX,mouseY,10,10);
+     break;
+     case 't':
+        noStroke();
+     fill(0,random(255),0);
+     rect(mouseX,mouseY,10,10);
+     break;
+     case 'y':
+        noStroke();
+     fill(0,0,random(255));
+     rect(mouseX,mouseY,10,10);
+     break;
+     case 'u':
+        noStroke();
+     fill(random(255),random(255),random(255));
+     rect(mouseX,mouseY,10,10);
+     break;
+  case 'e':
+    println("2");  // erase with bg color
+    fill(255);
+    eraser(bgc,mouseX, mouseY,25);
+    break;
+  default:             // Default executes if the case labels
+    println("None");   // don't match the switch parameter
+    break;
+  }
+
+  }
+
+  void drawline(color k, int lx,int ly, int px,int py) {
+   // strokeWeight(1);
+    stroke(k);
+    line(lx, ly, px, py);
+  }
+
+  void drawFatLine(color k, int lx,int ly, int px,int py) {
+    strokeWeight(10);
+    stroke(k);
+    line(lx, ly, px, py);
+  }
+
+
+  void eraser(color k,int lx,int ly,int sz) {
+    stroke(k);
+    ellipse(lx, ly, sz,sz);
+  }
+
+
+  void clear_print() {
+
+  // these 2 options let you choose between clearing the background
+  // and saveing the current image as a file.
+    if (key == 'x' || key == 'X') {
+       background(255);
+    } else if (key == 'p' || key == 'P') {
+       saveFrame("x_xxx_####.png");
+       //this will save the name as the intials and a random counting number.
+       // it will always be larger in value then the last one.
+       delay(500);
+    }
+  }
+</pre>
+        </div>
+
       </div>
 
       <!-- The column for artist statement and the link-->
-      <div class="eight columns">
+      <div class="four columns">
         <h5>Project 1</h5>
         <p>
-          artist statement artist statement artist statement artist statement artist statement
-          artist statement artist statement artist statement artist statement artist statement
-          artist statement artist statement artist statement artist statement artist statement
-          artist statement artist statement artist statement artist statement artist statement
-          artist statement artist statement artist statement artist statement artist statement
-          artist statement artist statement artist statement artist statement artist statement <br>
+          For my drawing tool, I made different tools using randomness and RGB. I wanted to make it so that every time you draw something it will always
+          look slightly different due to the unpredicability of the tools. Lines, ellipses, and squares can be made with this tool. The color options are red,
+          green, blue, grayscale, and rainbow colors.
+           <br>
         </p>
         <!--  <a class="show-popup" href="#" data-showpopup="1" >run sketch</a> -->
-        <a href="video/p1.mp4">play video</a> <br>
-        <a href="code/p1/p1.txt">see code</a> <br>
+
         <br>
 
       </div>
@@ -409,9 +588,28 @@ if (x < 500) {
     </div>
 
 
+<div class="row section">
+
+  <div class="four columns">
+<img src="images/ss_80953.png" class="u-full-width">
+  </div>
+  <div class="four columns">
+<img src="images/ss_164653.png" class="u-full-width">
+  </div>
+  <div class="four columns">
+Key:
+<p>1: Black Pen | 2: blue circles | 3: green circles | 4: red circles | 5: rainbow circles | 6: grayscale circles | 7: grayscale line |
+  8: red line | 9: green line | 0: blue line | q: rainbow line | w: grayscale squares | r: red squares | t: green square | y: blue squares |
+  u: rainbow square
+</p>
+  </div>
+
+</div>
 
 
 
+<br>
+<br>
     <!-- end of MAIN container /////////////////-->
 
   </div>
