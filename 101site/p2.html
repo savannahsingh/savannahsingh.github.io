@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs –––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Art 101</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas ––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT ––––––––––––––––––––––––––––––––––––––––-–––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS & JS –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script type="text/javascript" src="css/overlaypopup.js"> </script>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/overlaypopup.css">
+  <link rel="stylesheet" href="css/nu_main.css">
+
+  <!-- Favicon –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- <link rel="icon" type="image/png" href="images/favicon.png"> -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="manifest" href="/assets/site.webmanifest">
+
+</head>
+
+<body>
+
+  <!-- NAVIGATION AT the TOP is Here-->
+
+  <nav class="navbar">
+    <div class="container nav_pad">
+      <ul>
+        <li><a class="navbar-link" href="index.html">Main</a></li>
+        <li><a class="navbar-link" href="readings.html">Readings</a></li>
+        <li><a class="navbar-link" href="p1.html">Project 1</a></li>
+        <li><a class="navbar-link" href="p2.html">Project 2</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+
+
+    <div class="row section">
+      <header id="header" class="twelve columns">
+        <br>
+        <h2>Savannah Singh - Project 2</h3>
+
+          <!-- <div class="statement_text">
+<em>
+Energy is neither created or destroyed it just moves around like a feral cat -- Albert  (put your own quote here)
+</em>
+<br>
+
+</div> -->
+          <br>
+      </header>
+    </div>
+
+
+    <!-- NOTE!: For each row section make sure your column divs add up to 12. so 4+8, 6+6, 2+10, etc.-->
+
+    <!-- Start Row //// -->
+    <div class="row section">
+
+
+      <!-- The column for showing the image and the link-->
+
+      <div class="four columns">
+
+        <a href="video/sketch3.mp4"> <img src="images/sketch3.png" class="u-full-width " /> </a>
+      </div>
+
+
+      <div class="four columns">
+        <div class="scroll">
+          <pre>
+
+            int count = 200;
+    int x = 0;
+    float[] posX = new float[count];
+    float[] posX2 = new float[count];
+    float[] posY = new float[count];
+    float[] posY2 = new float[count];
+    float[] speedX = new float[count];
+    float[] speedX2 = new float[count];
+    float[] speedY = new float[count];
+    float[] speedY2 = new float[count];
+    float[] sizeW = new float[count];
+    float[] sizeH = new float[count];
+    int[] colors = new int[count];
+
+    void setup() {
+      size(900, 900);
+      noStroke();
+      for (int i=0; i < posX.length; i++) {
+        posX[i] = width/2;
+        posY[i] = height/2;
+        posX2[i] = width/4;
+        posY2[i] = height/4;
+        speedX[i] = random(-5, 5);
+        speedY[i] = random(-5, 5);
+        speedX2[i] = random(-15, 15);
+        speedY2[i] = random(-15, 15);
+        sizeW[i] = random(20, 25);
+        sizeH[i] = random(20, 100);
+        colors[i] = int(random(0, 255));
+      }
+    }
+    void draw() {
+      //background(255, 0, 0, 20);
+
+      fill(255,50);
+      rect(0, 0, width, height);
+
+      for (int i = 0; i < posX.length; i++) {
+        //update all positions
+        posX[i] += speedX[i];
+        posY[i] += speedY[i];
+        posX2[i] += speedX2[i];
+        posY2[i] += speedY2[i];
+        //draw all balls
+        fill(colors[i], random(colors[i]), random(255));
+        rect(posX[i], posY[i], sizeW[i], sizeW[i]);
+        ellipse(posX2[i], posY2[i], sizeW[i], sizeW[i]);
+        //check boundaries for all balls
+
+        if (posX[i] < 40+sizeW[i]/2 || posX[i] > (width-40)-sizeW[i]/2 ) {
+          speedX[i] = -speedX[i];
+        }
+        if (posY[i] < 40+sizeW[i]/2 || posY[i] > (height-40)-sizeW[i]/2) {
+          speedY[i] = -speedY[i];
+        }
+        if (posX2[i] < 40+sizeW[i]/2 || posX2[i] > (width-40)-sizeW[i]/2 ) {
+          speedX2[i] = -speedX2[i];
+        }
+        if (posY2[i] < 40+sizeW[i]/2 || posY2[i] > (height-40)-sizeW[i]/2) {
+          speedY2[i] = -speedY2[i];
+        }
+      }
+
+      if (x < 1000) {
+        line(x, 0, x, 1);
+        x = x + 1;
+      } else {
+        exit();
+        //noLoop();
+      }
+       saveFrame("frames/line-####.png");
+
+    }
+         </pre>
+        </div>
+      </div>
+      <!-- The column for artist statement and the link-->
+      <div class="four columns">
+        <h5>Sketch 3</h5>
+        <p>
+        For this sketch, I created ellipses that bounced off the sides of the frame. I changed the background to make the ellipses create a trail and I used random for the colors. 
+        </p>
+        <!--  <a class="show-popup" href="#" data-showpopup="1" >run sketch</a> -->
+        <!-- <a href="video/sketch1animation.mp4">play video</a> <br>
+        <a href="code/p1ex1/p1ex1.txt">see code</a> <br> -->
+
+      </div>
+
+
+
+      <!--////  End of row section-->
+    </div>
+    <br>
+    <hr>
+    <br>
+
+    <!-- Start Row //// -->
+    <div class="row section">
+
+
+      <!-- The column for showing the image and the link-->
+
+      <div class="four columns">
+
+        <a href="video/sketch4.mp4"> <img src="images/sketch4.png" class="u-full-width " /> </a>
+      </div>
+      <div class="four columns">
+        <div class="scroll">
+          <pre>
+            float counter = 0.0;
+            float speed = 0.3;
+            int x = 0;
+            //Initial code by TheCodingTrain
+            Drop[] drops = new Drop[200]; // array of drop objects
+            Drop2[] drops2 = new Drop2[200];
+
+            void setup() {
+              size(900, 900); // size of the window
+              for (int i = 0; i < drops.length; i++) { // we create the drops
+                drops[i] = new Drop();
+                drops2[i] = new Drop2();
+              }
+            }
+
+            void draw() {
+              //background(0);
+              fill(0,20);
+              rect(0,0,width,height);
+              for (int i = 0; i < drops.length; i++) {
+                drops[i].fall(); // sets the shape and speed of drop
+                drops[i].show(); // render drop
+              }
+              for (int i = 0; i < drops2.length; i++) {
+               drops2[i].fall();
+               drops2[i].show();
+              }
+
+
+              pushMatrix();
+              translate(counter,100);
+              rotate(radians(counter));
+              scale(counter/2);
+              fill(255,50);
+              noStroke();
+              ellipse(50,0,50,50);
+              popMatrix();
+
+              pushMatrix();
+              translate(counter,50);
+              rotate(radians(counter));
+              scale(counter/2);
+              fill(255,50);
+              noStroke();
+              ellipse(200,0,50,50);
+              popMatrix();
+
+
+
+
+                counter+=speed;
+
+              if (counter > width || counter< 0 ) {
+                speed = -speed;
+              }
+
+
+              //  if (x < 600) {
+              //  line(x, 0, x, 1);
+              //  x = x + 1;
+              //} else {
+              //  exit();
+              //  //noLoop();
+              //}
+              // saveFrame("frames/line-####.png");
+            }
+
+            class Drop {
+              float x; // x postion of drop
+              float y; // y position of drop
+              float z; // z position of drop , determines whether the drop is far or near
+              float len; // length of the drop
+              float yspeed; // speed of te drop
+
+              //near means closer to the screen , ie the higher the z value ,closer the drop is to the screen.
+              Drop() {
+                x  = random(width); // random x position ie width because anywhere along the width of screen
+                y  = random(-500, -50); // random y position, negative values because drop first begins off screen to give a realistic effect
+                z  = random(0, 20); // z value is to give a perspective view , farther and nearer drops effect
+                len = map(z, 0, 20, 10, 20); // if z is near then  drop is longer
+                yspeed  = map(z, 0, 20, 1, 20); // if z is near drop is faster
+              }
+
+              void fall() { // function  to determine the speed and shape of the drop
+                y = y + yspeed; // increment y position to give the effect of falling
+                float grav = map(z, 0, 20, 0, 0.2); // if z is near then gravity on drop is more
+                yspeed = yspeed + grav; // speed increases as gravity acts on the drop
+
+                if (y > height) { // repositions the drop after it has 'disappeared' from screen
+                  y = random(-200, -100);
+                  yspeed = map(z, 0, 20, 4, 10);
+                }
+              }
+
+              void show() { // function to render the drop onto the screen
+                float thick = map(z, 0, 20, 1, 3); //if z is near , drop is more thicker
+                strokeWeight(thick); // weight of the drop
+                stroke(100, 100, 255);
+                line(x, y, x, y+len); // draws the line with two points
+              }
+            }
+
+            class Drop2 {
+             float x; // x postion of drop
+              float y; // y position of drop
+              float z; // z position of drop , determines whether the drop is far or near
+              float len; // length of the drop
+              float yspeed; // speed of te drop
+
+              //near means closer to the screen , ie the higher the z value ,closer the drop is to the screen.
+              Drop2() {
+                x  = random(width); // random x position ie width because anywhere along the width of screen
+                y  = random(-500, -50); // random y position, negative values because drop first begins off screen to give a realistic effect
+                z  = random(0, 20); // z value is to give a perspective view , farther and nearer drops effect
+                len = map(z, 0, 45, 50, 90); // if z is near then  drop is longer
+                yspeed  = map(z, 0, 40, 10, 100); // if z is near drop is faster
+              }
+
+              void fall() { // function  to determine the speed and shape of the drop
+                y = y + yspeed; // increment y position to give the effect of falling
+                float grav = map(z, 0, 20, 0, 0.2); // if z is near then gravity on drop is more
+                yspeed = yspeed + grav; // speed increases as gravity acts on the drop
+
+                if (y > height) { // repositions the drop after it has 'disappeared' from screen
+                  y = random(-200, -100);
+                  yspeed = map(z, 0, 20, 4, 10);
+                }
+              }
+
+              void show() { // function to render the drop onto the screen
+                float thick = map(z, 0, 15, 1, 1); //if z is near , drop is more thicker
+                strokeWeight(thick); // weight of the drop
+                stroke(85, 51, 82); // purple color
+                line(x, y, x, y+len); // draws the line with two points
+              }
+            }
+</pre>
+
+        </div>
+      </div>
+      <!-- The column for artist statement and the link-->
+      <div class="four columns">
+        <h5>Sketch 4</h5>
+        <p>
+          For Sketch 4, I created a rain drop animation and created ellipses that travel in a spiral form around the frame.
+        <!--  <a class="show-popup" href="#" data-showpopup="1" >run sketch</a> -->
+        <!-- <a href="video/sketch2animation.mp4">play video</a> <br>
+        <a href="code/p1ex2/p1ex2.txt">see code</a> <br> -->
+      </div>
+
+
+
+
+      <!--////  End of row section-->
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+
+    <div class="row section">
+
+
+      <!-- The column for showing the image and the link-->
+
+      <div class="four columns">
+
+        <a href="video/p2animation.mp4"> <img src="images/p2.png" class="u-full-width"> </a>
+      </div>
+
+      <div class="four columns">
+        <div class="scroll">
+          <pre>
+            int n = 0;
+          int c = 15;
+          int a;
+          int r;
+          int x;
+          int y;
+          int dim;
+          int w = 0;
+
+          //Sline l1 = new Sline(0, 0, random(500), random(500));
+          //Sline l2 = new Sline(1920, 1080, random(500), random(500));
+
+
+
+          float[] distribution = new float[360];
+
+
+
+
+          void setup() {
+           size(1920,1080);
+           background(0);
+           //colorMode(HSB);
+             for (int i = 0; i < distribution.length; i++) {
+              distribution[i] = int(randomGaussian() * 15);
+          }
+          }
+
+          void draw() {
+          ss_star();
+          ss_spiral();
+          ss_bubbles();
+
+            if (w < 1000) {
+              line(w, 0, w, 1);
+              w = w + 1;
+            } else {
+              exit();
+              //noLoop();
+            }
+             saveFrame("frames/line-####.png");
+
+          }
+
+          void ss_spiral() {
+
+             a = int(n * 137.3);
+           r = mouseX - int(c * sqrt(n));
+
+           x = int(r * cos(a) + width/2);
+           y = int(r * sin(a) + height/2);
+
+
+           fill((a-r) % 255, 255, 255);
+           noStroke();
+           ellipse(x, y, 10, 10);
+           n++;
+          }
+
+          void ss_bubbles() {
+
+          if ( frameCount > 300 ) {
+              fill( 255, 255, (a-r) % 255);
+              noStroke();
+              rect(x-10,y-10,20,20);
+
+
+            }
+          }
+
+          void ss_star() {
+            //translate(width/2, width/2);
+
+            if ( frameCount > 200 ) {
+              for (int i = 0; i < distribution.length; i++) {
+
+              rotate(TWO_PI/distribution.length);
+              stroke((a-r) % 255, 255, 255,10);
+              float dist = abs(distribution[i]);
+              line(0, 0, random(500), random(500));
+            }
+          }
+             if ( frameCount > 600 ) {
+               //translate(width/2,height/2);
+              for (int i = 0; i < distribution.length; i++) {
+
+              rotate(TWO_PI/distribution.length);
+              stroke( 255, (a-r) % 255, 255,10);
+              float dist = abs(distribution[i]);
+              line(1920, 1080, random(500), random(500));
+            }
+          }
+
+          }
+</pre>
+        </div>
+
+      </div>
+
+      <!-- The column for artist statement and the link-->
+      <div class="four columns">
+        <h5>Project 2</h5>
+        <p>
+          For project 2, I used a fibonacci spiral as the algorithm and used framecount to make the video change over time. I created a texture that eventually fill the background
+          and changed shapes and colors to make a galaxy like animation.
+                     <br>
+        </p>
+        <!--  <a class="show-popup" href="#" data-showpopup="1" >run sketch</a> -->
+
+        <br>
+
+      </div>
+
+
+      <!--////  End of row section-->
+    </div>
+
+
+
+
+
+
+<br>
+<br>
+    <!-- end of MAIN container /////////////////-->
+
+  </div>
+
+
+
+
+  <!-- ///////START of Overlay and pops for videos ///////////////////////////////////////////////////////////////// -->
+
+  <div class="overlay-bg"> </div>
+
+  <div class="overlay-content popup1">
+
+    <!--   sketch content here///////////////// -->
+
+
+    <button class="close-btn">X</button>
+  </div>
+
+  <div class="overlay-content popup2">
+
+    <!-- sketch content here/////////////////-->
+
+    <button class="close-btn">X</button>
+  </div>
+
+</body>
+
+</html>
