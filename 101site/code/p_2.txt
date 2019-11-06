@@ -1,0 +1,131 @@
+int n = 0;
+int c = 15;
+int a; 
+int r;
+int x;
+int y;
+int dim;
+int w = 0;
+
+//Sline l1 = new Sline(0, 0, random(500), random(500));
+//Sline l2 = new Sline(1920, 1080, random(500), random(500));
+Sline[] SLines = new Sline[1000];
+  
+  
+float[] distribution = new float[360];
+
+
+
+
+void setup() {
+ size(1920,1080); 
+ background(0);
+ //colorMode(HSB); 
+   for (int i = 0; i < distribution.length; i++) {
+    distribution[i] = int(randomGaussian() * 15);
+      for (int i = 0; i < Slines.length; i++) {
+    Slines[i] = new Sline(random(width), random(height), random(-3, 3), random(-3, 3));
+  }
+}
+}
+
+void draw() {
+ss_star();
+ss_spiral();
+ss_bubbles();
+
+  for (int i = 0; i < Slines.length; i++) {
+    Slines[i].move();
+    Slines[i].display();
+
+  if (w < 1000) {
+    line(w, 0, w, 1);
+    w = w + 1;
+  } else {
+    exit();
+    //noLoop();
+  }
+   saveFrame("frames/line-####.png");
+
+}
+
+void ss_spiral() {
+ 
+   a = int(n * 137.3); 
+ r = mouseX - int(c * sqrt(n));
+ 
+ x = int(r * cos(a) + width/2);
+ y = int(r * sin(a) + height/2);
+ 
+ 
+ fill((a-r) % 255, 255, 255);
+ noStroke();
+ ellipse(x, y, 10, 10); 
+ n++;
+}
+
+void ss_bubbles() {
+  
+if ( frameCount > 300 ) {
+    fill( 255, 255, (a-r) % 255);
+    noStroke();
+    rect(x-10,y-10,20,20);
+
+
+  }
+}
+
+void ss_star() {
+  //translate(width/2, width/2);
+
+  if ( frameCount > 200 ) {
+    for (int i = 0; i < distribution.length; i++) {
+
+    rotate(TWO_PI/distribution.length);
+    stroke((a-r) % 255, 255, 255,10);
+    float dist = abs(distribution[i]);
+    line(0, 0, random(500), random(500));
+  }
+}
+   if ( frameCount > 600 ) {
+     //translate(width/2,height/2);
+    for (int i = 0; i < distribution.length; i++) {
+
+    rotate(TWO_PI/distribution.length);
+    stroke( 255, (a-r) % 255, 255,10);
+    float dist = abs(distribution[i]);
+    line(1920, 1080, random(500), random(500));
+  }
+}
+
+}
+
+class Sline {
+  float x;
+  float y;
+  float xSpeed;
+  float ySpeed;
+
+  Sline(float x, float y, float xSpeed, float ySpeed) {
+      this.x = x;
+      this.y = y;
+      this.xSpeed = xSpeed;
+      this.ySpeed = ySpeed;
+  }
+
+  void move() {
+    x += xSpeed;
+    if (x < 0 || x > width) {
+      xSpeed *= -1;
+    }
+
+    y += ySpeed;
+    if (y < 0 || y > height) {
+      ySpeed *= -1;
+    }
+  }
+
+  void display() {
+    line(x, y, 10, 10);
+  }
+}

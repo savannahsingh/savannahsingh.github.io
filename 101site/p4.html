@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs –––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Art 101</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas ––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT ––––––––––––––––––––––––––––––––––––––––-–––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS & JS –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script type="text/javascript" src="css/overlaypopup.js"> </script>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/overlaypopup.css">
+  <link rel="stylesheet" href="css/nu_main.css">
+
+  <!-- Favicon –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- <link rel="icon" type="image/png" href="images/favicon.png"> -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="manifest" href="/assets/site.webmanifest">
+
+</head>
+
+<body>
+
+  <!-- NAVIGATION AT the TOP is Here-->
+
+  <nav class="navbar">
+    <div class="container nav_pad">
+      <ul>
+        <li><a class="navbar-link" href="index.html">Main</a></li>
+        <li><a class="navbar-link" href="readings.html">Readings</a></li>
+        <li><a class="navbar-link" href="p1.html">Project 1</a></li>
+        <li><a class="navbar-link" href="p2.html">Project 2</a></li>
+        <li><a class="navbar-link" href="p3.html">Project 3</a></li>
+        <li><a class="navbar-link" href="p4.html">Project 4</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+
+
+    <div class="row section">
+      <header id="header" class="twelve columns">
+        <br>
+        <h2>Savannah Singh - Project 4</h3>
+
+          <br>
+      </header>
+    </div>
+
+
+
+    <!-- Start Row //// -->
+    <div class="row section">
+
+
+      <!-- The column for showing the image and the link-->
+
+      <div class="four columns">
+
+        <a href="sketch6/6/index.html"> <img src="images/corgi.png" class="u-full-width " /> </a>
+      </div>
+
+
+      <div class="four columns">
+        <div class="scroll">
+          <pre>
+var gridarr = [
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+  [0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1],
+  [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+  [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+  [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+  [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+  [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0],
+  [0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0],
+  [0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0]
+  ];
+
+                  var a = 0;
+
+                  function setup() {
+
+                  createCanvas(500, 500);
+
+                  background(50);
+
+                  for (var i = 0; i < 16; i++) {
+                          for (var j = 0; j < 16; j++) {
+                            a = gridarr[i][j];
+                                if (a === 1) {
+                                  fill(158, 255, 164);
+                                } else {
+                                  fill(255, 130, 177);
+                                }
+
+                            // typical way of mapping out a grid (counter * scale) + offset
+                            // where counter is a var from the forloop
+                            // scale is value that will term the size/position of each drawing
+                            // offset is a relative movement to place
+                            // the grid collection around on the canvas
+
+                            rect((j * 30) + 15, (i * 30) + 15, 20, 20);
+                          }
+                      }
+                  }
+
+
+         </pre>
+        </div>
+      </div>
+      <!-- The column for artist statement and the link-->
+      <div class="four columns">
+        <h5>Sketch 6</h5>
+        <p>
+        For this sketch,
+        <p> <a href="code/sketch3.txt">Code </a> </p>
+        <!--  <a class="show-popup" href="#" data-showpopup="1" >run sketch</a> -->
+        <!-- <a href="video/sketch1animation.mp4">play video</a> <br>
+        <a href="code/p1ex1/p1ex1.txt">see code</a> <br> -->
+
+      </div>
+
+
+
+      <!--////  End of row section-->
+    </div>
+    <br>
+    <hr>
+    <br>
+
+    <!-- Start Row //// -->
+    <div class="row section">
+
+
+      <!-- The column for showing the image and the link-->
+
+      <div class="four columns">
+
+        <a href="sketch7/index.html"> <img src="images/sketch7.png" class="u-full-width " /> </a>
+      </div>
+      <div class="four columns">
+        <div class="scroll">
+          <pre>
+            var blob;
+
+                   /*
+                    // sample example
+                var sampletoon = {
+                   "name":"Boris",
+                   "r":200,
+                   "g":160,
+                   "b":200,
+                   "head": 60,
+                   "torso": 33,
+                   "posX":50,
+                   "posY":90,
+                   "moveX":[5,-3,4,-6,-3,3,4,-2],
+                   "moveY":[2,4,4,6,-3,3,4,-2]
+                    }
+                    */
+                    var count = 200;
+                    var x = 0;
+                    var posX = [];
+                    var posX2 = [];
+                    var posY = [];
+                    var posY2 = [];
+                    var speedX = [];
+                    var speedX2 = [];
+                    var speedY = [];
+                    var speedY2 = [];
+                    var sizeW = [];
+                    var sizeH = [];
+                    var colors = [];
+
+                    var d = 0
+                    var b = 0
+
+
+
+             var sx = 0;
+             var sy = 0;
+
+
+            function preload() {
+              blob = loadJSON("blob.json");
+            }
+
+            function setup() {
+               createCanvas(displayWidth, 400);
+
+                rectMode(CENTER);
+
+                 // this shows the whole blob json data package
+               console.log(blob);
+               noStroke();
+
+
+               for (var i=0; i < count; i++) {
+                 posX[i] = width/2;
+                 posY[i] = height/2;
+                 posX2[i] = width/4;
+                 posY2[i] = height/4;
+                 speedX[i] = random(-5, 5);
+                 speedY[i] = random(-5, 5);
+                 speedX2[i] = random(-15, 15);
+                 speedY2[i] = random(-15, 15);
+                 sizeW[i] = random(1, 2);
+                 sizeH[i] = random(1, 2);
+                 colors[i] = (random(0, 255));
+               }
+            }
+
+
+
+            function draw() {
+              background(126, 161, 255,100);
+
+              for (var i = 0; i < count; i++) {
+             //   //update all positions
+               posX[i] += speedX[i];
+               posY[i] += speedY[i];
+               posX2[i] += speedX2[i];
+              posY2[i] += speedY2[i];
+
+              fill(255);
+                // fill(150, 200, 75);
+             ellipse(posX2[i], posY2[i], sizeW[i], sizeW[i]);
+            // tint(0, 153, 204, 126);
+
+              //check boundaries for all balls
+
+              if (posX[i] < 40+sizeW[i]/2 || posX[i] > (width-40)-sizeW[i]/2 ) {
+                speedX[i] = -speedX[i];
+              }
+              if (posY[i] < 40+sizeW[i]/2 || posY[i] > (height-40)-sizeW[i]/2) {
+                speedY[i] = -speedY[i];
+              }
+              if (posX2[i] < 40+sizeW[i]/2 || posX2[i] > (width-40)-sizeW[i]/2 ) {
+                speedX2[i] = -speedX2[i];
+              }
+              if (posY2[i] < 40+sizeW[i]/2 || posY2[i] > (height-40)-sizeW[i]/2) {
+                speedY2[i] = -speedY2[i];
+              }
+            }
+
+
+
+            for (var d = 0; d <= width; d += 50) {
+                for (var b = 0; b <= height; b += 50) {
+                  fill (random(255), 0, random(255));
+                  ellipse(d, b, 25, 25);
+                }
+
+              }
+              // updateToon(blob.toons[0]);  // Natasha
+              // updateToon(blob.toons[1]);  // Boris
+            for(var i = 0; i < blob.toons.length; i++)
+            {
+
+            updateToon(blob.toons[i]);
+
+            }
+
+            fill(255,60);
+            triangle(displayWidth/2, 0, mouseX-50, mouseY, mouseX+50, mouseY);
+            fill(255,100);
+            ellipse(mouseX, mouseY, 100,20)
+
+            }
+
+
+
+            function updateToon(obj) {
+
+                  push();
+
+                  if ( int(random(10)) > 8) {
+                   obj.nextX = int(random(obj.moveX.length));
+                   obj.nextY = int(random(obj.moveY.length));
+                  }
+
+                  obj.posX += obj.moveX[obj.nextX];
+                  obj.posY += obj.moveY[obj.nextY];
+
+
+                  // console.log(obj.posX);
+
+                   if (obj.posX > width) {
+                     obj.posX = 0;
+                   }
+
+                   if (obj.posX < 0) {
+                     obj.posX = width;
+                   }
+
+                   if (obj.posY > height) {
+                     obj.posY = 0;
+                   }
+
+                   if (obj.posY < 0) {
+                     obj.posY = height;
+                   }
+
+                   drawToon(obj);
+
+                  pop();
+
+
+            }
+
+
+
+            function drawToon( obj) {
+
+                //  console.log(obj.posX[s]);
+
+              push();
+                    translate(obj.posX , obj.posY);
+
+                     //head
+                    fill(obj.r,obj.g,obj.b);
+                    ellipse(0,20,obj.head,obj.head);
+
+
+
+                    // eyes
+                    fill(0);
+                    ellipse(-10,obj.head / 2 ,5,5);
+                    ellipse(10,obj.head / 2,5,5);
+
+                    //torso
+                    fill(obj.r,obj.g,obj.b);
+                    rect(0,70,obj.torso,obj.torso);
+
+            //         // bowties
+            //         if(obj.bowtie == "black") {
+            //         fill(0);
+            //         triangle(0, obj.head + 30, obj.head - 10, obj.head +20, obj.head - 10, obj.torso + 40);
+            //         triangle(0,obj.head +30, -(obj.head - 10), obj.head +20, -(obj.head-10), obj.torso + 40);
+            // }
+
+
+                    if(obj.hat == "tophat") {
+                      fill(0);
+                      rect(0, -obj.head / 3, obj.head - 10, obj.head);
+                      rect(0, 0, obj.head +10, obj.head /3 );
+                    }
+
+                    if(obj.hat == "beanie") {
+                      fill(obj.r +100,obj.g,obj.b);
+                      arc(0, 0, obj.head, obj.head + 5, PI, 0);
+                      fill(obj.r +50,obj.g,obj.b);
+                      rect(0,0,obj.head, obj.head / 3);
+                    }
+
+                    if(obj.hat == "cap") {
+                      fill(obj.r,obj.g,obj.b +100);
+                      arc(0, 10, obj.head +5, obj.head +5, PI, 0);
+                      fill(255);
+                      rect(obj.head / 1.5, 7, obj.head / 3, obj.head / 10);
+                    }
+
+                    // bowties
+                    if(obj.bowtie == "black") {
+                    fill(0);
+                    triangle(0,0, obj.torso -20, obj.torso-20, obj.torso-30, obj.torso-30);
+            }
+
+                //name
+                    fill(255);
+                    textAlign(CENTER);
+                    textSize(obj.torso/2);
+                    text(obj.name,0,obj.torso/2 +60);
+
+                pop();
+
+            }
+
+</pre>
+
+        </div>
+      </div>
+      <!-- The column for artist statement and the link-->
+      <div class="four columns">
+        <h5>Sketch 7</h5>
+        <p>
+          For this sketch,
+              <p> <a href="code/sketch4.txt">Code </a> </p>
+        <!--  <a class="show-popup" href="#" data-showpopup="1" >run sketch</a> -->
+        <!-- <a href="video/sketch2animation.mp4">play video</a> <br>
+        <a href="code/p1ex2/p1ex2.txt">see code</a> <br> -->
+      </div>
+
+
+
+
+      <!--////  End of row section-->
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+
+    <div class="row section">
+
+
+      <!-- The column for showing the image and the link-->
+
+      <div class="four columns">
+
+        <a href="clock/clock/index.html"> <img src="images/clock.png" class="u-full-width"> </a>
+      </div>
+
+      <div class="four columns">
+        <div class="scroll">
+          <pre>
+            let t = 0;
+
+            function setup() {
+              createCanvas(1000, 1000);
+              angleMode(DEGREES);
+            }
+
+            function draw() {
+
+              fill(0, 0, 10,3);
+              ellipse(500,500,990,990)
+              translate(width/2, height/2);
+              rotate(-180);
+
+              let hr = hour();
+              let mn = minute();
+              let sc = second();
+
+              strokeWeight(8);
+              stroke(233,117, 255,10);
+              let secondAngle = map(sc, 0, 60, 0, 360);
+
+
+              stroke(130, 140, 255,10);
+              let minuteAngle = map(mn, 0, 60, 0, 360);
+
+
+              stroke(117, 255, 255, 10);
+              let hourAngle = map(hr % 12, 0, 12, 0, 360);
+
+
+
+              push();
+              rotate(secondAngle);
+            stroke(233,117, 255,10);
+              triangle(secondAngle, 250, secondAngle, 25);
+              pop();
+
+              push();
+              rotate(minuteAngle);
+              stroke(130, 140, 255);
+              triangle(minuteAngle, 350, minuteAngle, 50);
+              pop();
+
+              push();
+              rotate(hourAngle);
+              stroke(117, 255, 255);
+              triangle(hourAngle, 450, hourAngle, 100);
+              pop();
+
+
+
+
+
+
+               if (mouseIsPressed) {
+               rotate(180);
+                  fill(255);
+                  noStroke();
+                  textSize(36);
+                  text(hr + ':' + mn + ':' + sc, 0, 150);
+
+            isAMPM();
+
+
+             }
+
+            }
+
+            function isAMPM (hr) {
+            let tod;
+            if (hr < 12) {  //its AM
+             tod = "AM";
+             fill(230,255,90);
+             ellipse(0,0, 50,50);
+
+
+            } else { //otherwise PM
+             tod = "PM";
+             fill(255);
+             ellipse(0,0,50,50);
+             fill(0,0,10);
+             ellipse(10,-10,30,30);
+            }
+            return tod;
+            }
+</pre>
+        </div>
+
+      </div>
+
+      <!-- The column for artist statement and the link-->
+      <div class="four columns">
+        <h5>Project 4</h5>
+        <p>
+        For project 4,
+              <p> <a href="code/p_2.txt">Code </a> </p>
+                     <br>
+
+
+        <!--  <a class="show-popup" href="#" data-showpopup="1" >run sketch</a> -->
+
+        <br>
+
+      </div>
+
+
+      <!--////  End of row section-->
+    </div>
+
+
+
+
+
+
+<br>
+<br>
+    <!-- end of MAIN container /////////////////-->
+
+  </div>
+
+
+
+
+  <!-- ///////START of Overlay and pops for videos ///////////////////////////////////////////////////////////////// -->
+
+  <div class="overlay-bg"> </div>
+
+  <div class="overlay-content popup1">
+
+    <!--   sketch content here///////////////// -->
+
+
+    <button class="close-btn">X</button>
+  </div>
+
+  <div class="overlay-content popup2">
+
+    <!-- sketch content here/////////////////-->
+
+    <button class="close-btn">X</button>
+  </div>
+
+</body>
+
+</html>

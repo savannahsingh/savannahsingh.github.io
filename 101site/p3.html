@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs –––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Art 101</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas ––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT ––––––––––––––––––––––––––––––––––––––––-–––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS & JS –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script type="text/javascript" src="css/overlaypopup.js"> </script>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/overlaypopup.css">
+  <link rel="stylesheet" href="css/nu_main.css">
+
+  <!-- Favicon –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- <link rel="icon" type="image/png" href="images/favicon.png"> -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="manifest" href="/assets/site.webmanifest">
+
+</head>
+
+<body>
+
+  <!-- NAVIGATION AT the TOP is Here-->
+
+  <nav class="navbar">
+    <div class="container nav_pad">
+      <ul>
+        <li><a class="navbar-link" href="index.html">Main</a></li>
+        <li><a class="navbar-link" href="readings.html">Readings</a></li>
+        <li><a class="navbar-link" href="p1.html">Project 1</a></li>
+        <li><a class="navbar-link" href="p2.html">Project 2</a></li>
+        <li><a class="navbar-link" href="p3.html">Project 3</a></li>
+        <li><a class="navbar-link" href="p4.html">Project 4</a></li>
+
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+
+
+    <div class="row section">
+      <header id="header" class="twelve columns">
+        <br>
+        <h2>Savannah Singh - Project 3</h3>
+
+          <!-- <div class="statement_text">
+<em>
+Energy is neither created or destroyed it just moves around like a feral cat -- Albert  (put your own quote here)
+</em>
+<br>
+
+</div> -->
+          <br>
+      </header>
+    </div>
+
+
+    <!-- NOTE!: For each row section make sure your column divs add up to 12. so 4+8, 6+6, 2+10, etc.-->
+
+    <!-- Start Row //// -->
+    <div class="row section">
+
+
+      <!-- The column for showing the image and the link-->
+
+      <div class="four columns">
+
+        <a href="p5_code/ex5/index.html"> <img src="images/ex5.png" class="u-full-width " /> </a>
+      </div>
+
+
+      <div class="four columns">
+        <div class="scroll">
+          <pre>
+            var count = 200;
+            var x = 0;
+            var posX = [];
+            var posX2 = [];
+            var posY = [];
+            var posY2 = [];
+            var speedX = [];
+            var speedX2 = [];
+            var speedY = [];
+            var speedY2 = [];
+            var sizeW = [];
+            var sizeH = [];
+            var colors = [];
+
+            let xoff = 0.0;
+
+            function setup() {
+              createCanvas(900,900);
+              // frameRate(30);
+              // background(255);
+              noStroke();
+              for (var i=0; i < count; i++) {
+                posX[i] = width/2;
+                posY[i] = height/2;
+                posX2[i] = width/4;
+                posY2[i] = height/4;
+                speedX[i] = random(-5, 5);
+                speedY[i] = random(-5, 5);
+                speedX2[i] = random(-15, 15);
+                speedY2[i] = random(-15, 15);
+                sizeW[i] = random(20, 25);
+                sizeH[i] = random(20, 100);
+                colors[i] = (random(0, 255));
+              }
+
+              noiseSeed(99);
+             stroke(0, 500);
+            }
+
+
+            function draw() {
+
+             fill(100,50);
+              rect(0, 0, width, height);
+            console.log("hi");
+               for (var i = 0; i < count; i++) {
+              //   //update all positions
+                posX[i] += speedX[i];
+                posY[i] += speedY[i];
+                posX2[i] += speedX2[i];
+               posY2[i] += speedY2[i];
+              //   //draw all balls
+                fill(colors[i], random(colors[i]), random(255));
+                  // fill(150, 200, 75);
+                rect(posX[i], posY[i], sizeW[i], sizeW[i]);
+                // rect(10, 10, 20, 20);
+               ellipse(posX2[i], posY2[i], sizeW[i], sizeW[i]);
+            // tint(0, 153, 204, 126);
+
+                //check boundaries for all balls
+
+                if (posX[i] < 40+sizeW[i]/2 || posX[i] > (width-40)-sizeW[i]/2 ) {
+                  speedX[i] = -speedX[i];
+                }
+                if (posY[i] < 40+sizeW[i]/2 || posY[i] > (height-40)-sizeW[i]/2) {
+                  speedY[i] = -speedY[i];
+                }
+                if (posX2[i] < 40+sizeW[i]/2 || posX2[i] > (width-40)-sizeW[i]/2 ) {
+                  speedX2[i] = -speedX2[i];
+                }
+                if (posY2[i] < 40+sizeW[i]/2 || posY2[i] > (height-40)-sizeW[i]/2) {
+                  speedY2[i] = -speedY2[i];
+
+                }
+              }
+            strokeCap(ROUND);
+              xoff = xoff + .01;
+             let n = noise(xoff) * width;
+             line(n, 0, n, height);
+            }
+
+
+
+
+         </pre>
+        </div>
+      </div>
+      <!-- The column for artist statement and the link-->
+      <div class="four columns">
+        <h5>Sketch 5</h5>
+        <p>
+        For this sketch, I converted a processing sketch to a p5 sketch. I also added noiseSeed and strokeCap round.
+        <p> <a href="code/sketch3.txt">Code </a> </p>
+        <!--  <a class="show-popup" href="#" data-showpopup="1" >run sketch</a> -->
+        <!-- <a href="video/sketch1animation.mp4">play video</a> <br>
+        <a href="code/p1ex1/p1ex1.txt">see code</a> <br> -->
+
+      </div>
+
+
+
+      <!--////  End of row section-->
+    </div>
+    <br>
+    <hr>
+    <br>
+
+    <!-- Start Row //// -->
+    <div class="row section">
+
+
+      <!-- The column for showing the image and the link-->
+
+      <div class="four columns">
+
+        <a href="ex5_2/ex5/index.html"> <img src="images/ex52.png" class="u-full-width " /> </a>
+      </div>
+      <div class="four columns">
+        <div class="scroll">
+          <pre>
+            var value = 0;
+
+            var tCounter = 0;
+
+            var b;
+
+            var f;
+
+            // PFont f;
+
+            var x = 0;
+
+            function setup() {
+              createCanvas(800, 800);
+              noStroke();
+              rectMode(CENTER);
+
+              b = loadImage("img/2corgi.jpg");
+              f = loadFont("asset/GOTHIC.ttf");
+
+            }
+
+
+
+
+            function draw() {
+
+              background(255-value);
+              fill(value,0 ,0);
+              ellipse(width/2, height/2, 400, 400);
+            image(b, 0, 0, width, height);
+
+              fill(value, 0, 0);
+              rect(200, 400, 50, tCounter);
+
+                fill(value, 0, 0);
+              rect(600, 400, 50, tCounter);
+
+              for ( var value = 0; value < width; value += 32 ) {
+                fill(mouseX, mouseY, 100, 100);
+                rect(value, height/4, 20, height);
+                // tvar(255, 50);
+                image(b, mouseX, mouseY);
+              }
+
+            blendMode(OVERLAY);
+            filter(GRAY);
+              value++;
+
+              if ( value > 255) {
+                value = 0;
+              }
+
+              fill(value, 204, 0);
+              rect(mouseX, height/2, mouseY/2+10, mouseY/2+5);
+              fill(value, 204, 0);
+
+
+
+              //prvarArray(PFont.list());
+
+              textFont(f);
+               if ( mouseIsPressed && keyPressed == true )
+              fill(0, random(255), random(255));
+              text("Send Help", 120, tCounter);
+
+              tCounter ++;
+              if (tCounter > width) {
+                tCounter = -10;
+            }
+
+
+              fill(50, 30, 0);
+              rect(0, 0, width, height);
+              textAlign(CENTER);
+              myDrawType("Hello", mouseX, 200);
+
+               circle(width*1, height*0.5, 200, 10);
+               circle(width*0, height*0.5, 200, 10);
+               circle(width*0.5, height*1, 200, 10);
+               circle(width*0.5, height*0, 200, 10);
+
+              //if (x < 900) {
+              //  line(x, 0, x, 1);
+              //  x = x + 1;
+              //} else {
+              //  noLoop();
+              //  exit();
+              //}
+              //saveFrame("line-#####.png");
+            }
+
+            function circle( lox,  loy,  createCanvas,  x) {
+              var a = createCanvas/x;
+              for (var i = 0; i < x; i++) {
+                fill(random(255),random(255),random(255));
+                ellipse(lox, loy, createCanvas - i*a, createCanvas - i*a);
+              }
+
+            }
+
+            function keyPressed() {
+
+              if ( key == 'b' || key == 'B' ) {
+                // example of toggle logic
+                stroke(1);
+                strokeWeight(3);
+                line(mouseX, mouseY, pmouseX, pmouseY);
+              } else {
+                stroke(6);
+                strokeWeight(10);
+              }
+            }
+
+
+            function mouseMoved() {
+              value = value + 1;
+              if (value > 255) {
+                value = 0;
+              }
+            }
+
+
+                   function ssDrawText(s,  lx,  ly,  c ) {
+                  fill(c);
+                  text(s, lx, ly,20);
+                }
+
+
+
+                function myDrawType( s,  x,  y ) {
+              fill(255, 0, 0);
+              text(s, x, y);
+              fill(200, 0, 0);
+              rect(x, y, 5, 5);
+            }
+
+
+</pre>
+
+        </div>
+      </div>
+      <!-- The column for artist statement and the link-->
+      <div class="four columns">
+        <h5>Sketch 5 part 2</h5>
+        <p>
+          For this sketch, I converted a processing sketch to a p5 sketch. I added the blendMode Overlay to my image and
+          I added the filter gray.
+              <p> <a href="code/sketch4.txt">Code </a> </p>
+        <!--  <a class="show-popup" href="#" data-showpopup="1" >run sketch</a> -->
+        <!-- <a href="video/sketch2animation.mp4">play video</a> <br>
+        <a href="code/p1ex2/p1ex2.txt">see code</a> <br> -->
+      </div>
+
+
+
+
+      <!--////  End of row section-->
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+
+    <div class="row section">
+
+
+      <!-- The column for showing the image and the link-->
+
+      <div class="four columns">
+
+        <a href="clock/clock/index.html"> <img src="images/clock.png" class="u-full-width"> </a>
+      </div>
+
+      <div class="four columns">
+        <div class="scroll">
+          <pre>
+            let t = 0;
+
+            function setup() {
+              createCanvas(1000, 1000);
+              angleMode(DEGREES);
+            }
+
+            function draw() {
+
+              fill(0, 0, 10,3);
+              ellipse(500,500,990,990)
+              translate(width/2, height/2);
+              rotate(-180);
+
+              let hr = hour();
+              let mn = minute();
+              let sc = second();
+
+              strokeWeight(8);
+              stroke(233,117, 255,10);
+              let secondAngle = map(sc, 0, 60, 0, 360);
+
+
+              stroke(130, 140, 255,10);
+              let minuteAngle = map(mn, 0, 60, 0, 360);
+
+
+              stroke(117, 255, 255, 10);
+              let hourAngle = map(hr % 12, 0, 12, 0, 360);
+
+
+
+              push();
+              rotate(secondAngle);
+            stroke(233,117, 255,10);
+              triangle(secondAngle, 250, secondAngle, 25);
+              pop();
+
+              push();
+              rotate(minuteAngle);
+              stroke(130, 140, 255);
+              triangle(minuteAngle, 350, minuteAngle, 50);
+              pop();
+
+              push();
+              rotate(hourAngle);
+              stroke(117, 255, 255);
+              triangle(hourAngle, 450, hourAngle, 100);
+              pop();
+
+
+
+
+
+
+               if (mouseIsPressed) {
+               rotate(180);
+                  fill(255);
+                  noStroke();
+                  textSize(36);
+                  text(hr + ':' + mn + ':' + sc, 0, 150);
+
+            isAMPM();
+
+
+             }
+
+            }
+
+            function isAMPM (hr) {
+            let tod;
+            if (hr < 12) {  //its AM
+             tod = "AM";
+             fill(230,255,90);
+             ellipse(0,0, 50,50);
+
+
+            } else { //otherwise PM
+             tod = "PM";
+             fill(255);
+             ellipse(0,0,50,50);
+             fill(0,0,10);
+             ellipse(10,-10,30,30);
+            }
+            return tod;
+            }
+</pre>
+        </div>
+
+      </div>
+
+      <!-- The column for artist statement and the link-->
+      <div class="four columns">
+        <h5>Project 3</h5>
+        <p>
+        For project 3, I made a clock using time functions for hour, minute, and second. I created a spiral that goes
+        around the center of the canvas to tell the time. When the mouse is pressed, the clock shows the time and if it is am or pm.
+              <p> <a href="code/p_2.txt">Code </a> </p>
+                     <br>
+
+
+        <!--  <a class="show-popup" href="#" data-showpopup="1" >run sketch</a> -->
+
+        <br>
+
+      </div>
+
+
+      <!--////  End of row section-->
+    </div>
+
+
+
+
+
+
+<br>
+<br>
+    <!-- end of MAIN container /////////////////-->
+
+  </div>
+
+
+
+
+  <!-- ///////START of Overlay and pops for videos ///////////////////////////////////////////////////////////////// -->
+
+  <div class="overlay-bg"> </div>
+
+  <div class="overlay-content popup1">
+
+    <!--   sketch content here///////////////// -->
+
+
+    <button class="close-btn">X</button>
+  </div>
+
+  <div class="overlay-content popup2">
+
+    <!-- sketch content here/////////////////-->
+
+    <button class="close-btn">X</button>
+  </div>
+
+</body>
+
+</html>

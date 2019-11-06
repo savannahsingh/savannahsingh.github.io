@@ -1,0 +1,24 @@
+{
+"people":
+[ {
+    "name":"Steve",
+    "r":25,
+    "g":0,
+    "b":255,
+    "quote":"I will be right back.."
+},
+{
+  "name":"Ralph",
+  "r":255,
+  "g":0,
+  "b":20,
+  "quote":"Im going to Regret that in the Morning"
+},
+{
+  "name":"Tim",
+  "r":0,
+  "g":255,
+  "b":50,
+  "quote":"That is a killer Rabit"
+} ]
+}
