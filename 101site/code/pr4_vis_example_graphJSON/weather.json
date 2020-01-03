@@ -1,0 +1,41 @@
+{
+
+"cities": [
+   { "name": "Milpitas",
+     "temperture": "60",
+     "humidity": "40"
+   },
+
+   { "name": "San Francisco",
+     "temperture": "65",
+     "humidity": "65"
+   },
+
+   { "name": "Santa Cruz",
+     "temperture": "76",
+     "humidity": "50"
+   },
+   { "name": "San Jose",
+     "temperture": "80",
+     "humidity": "35"
+   },
+   { "name": "Juneau",
+     "temperture": "12",
+     "humidity": "65"
+   },
+   { "name": "Sunnyvale",
+     "temperture": "82",
+     "humidity": "26"
+   },
+
+   { "name": "Novato",
+     "temperture": "90",
+     "humidity": "45"
+   },
+   { "name": "Dallas",
+     "temperture": "101",
+     "humidity": "80"
+   }
+  ]
+
+}

@@ -1,0 +1,174 @@
+ int x = 0;
+
+  char currentkey = '1';
+
+  color bgc = color(255);
+
+  void setup() {
+
+  size(900, 900);
+  background(255);
+  smooth();
+  }
+
+  void draw() {
+
+
+  // triggering the clear_print function
+  if(keyPressed) {
+  clear_print();
+  }
+  // triggering the newkeychoice
+  if(mousePressed) {
+    drawChoice();
+  }
+
+    //if (x < 1000) {
+    //  line(x, 0, x, 1);
+    //  x = x + 1;
+    //} else {
+    //  noLoop();
+    //  exit();
+    //}
+    //      saveFrame("newline-####.jpg");
+  }
+
+
+  void drawChoice() {
+    // the key mapping if statemens that you can change to do anything you want.
+    // just make sure each key option has the a stroke or fill and then what type of
+    // graphic function
+
+
+   // key global variable contains whatever key was last pressed
+   char currentkey = key;
+
+  switch(currentkey) {
+  case '1':
+    println("1");  // black line
+
+    drawline(color(0), mouseX, mouseY, pmouseX, pmouseY);
+    break;
+  case '2':
+    //println("2");  // rainbow line
+    //strokeWeight(5);
+    //drawline(color(random(255),random(255),random(255),random(255)), mouseX, mouseY, pmouseX, pmouseY);
+      noStroke(); // blue circle
+      fill(0,0,random(255));
+      ellipse(mouseX, mouseY, 100, 100);
+    break;
+  case '3':
+    println("2");  // green circle
+    noStroke();
+      fill(0, random(255),0);
+      ellipse(mouseX, mouseY, 100, 100);
+      break;
+  case '4':
+   // println("2");  // red circle
+   //fill(random(255),random(255),random(255));
+   //   stroke(random(255), random(255), random(255));
+   //   triangle(mouseX, mouseY, 350, 350, 20, 20);
+   noStroke();
+   fill(random(255),0,0);
+   ellipse(mouseX,mouseY,100,100);
+    break;
+   case '5': // rainbow circle
+   //drawline(color(random(255)), mouseX, mouseY,pmouseX, pmouseY);
+    noStroke();
+   fill(random(255),random(255),random(255));
+   ellipse(mouseX, mouseY, 100,100);
+   break;
+   case '6': //grayscale circle
+   noStroke();
+   fill(random(255));
+   ellipse(mouseX, mouseY, 100,100);
+   break;
+   case '7':
+   strokeWeight(6);
+   drawline(color(random(255)), mouseX, mouseY,pmouseX, pmouseY);
+   break;
+   case '8':
+    strokeWeight(6);
+    drawline(color(random(255),0,0), mouseX, mouseY,pmouseX, pmouseY);
+    break;
+    case '9':
+     strokeWeight(6);
+     drawline(color (0,random(255),0), mouseX, mouseY,pmouseX, pmouseY);
+    break;
+    case '0':
+     strokeWeight(6);
+     drawline(color(0,0,(random(255))), mouseX, mouseY,pmouseX, pmouseY);
+     break;
+     case 'q':
+        strokeWeight(6);
+     drawline(color(random(255),random(255),random(255)), mouseX, mouseY,pmouseX, pmouseY);
+     break;
+     case 'w':
+     noStroke();
+     fill(random(255));
+     rect(mouseX,mouseY,10,10);
+     break;
+     case 'r':
+        noStroke();
+     fill(random(255),0,0);
+     rect(mouseX,mouseY,10,10);
+     break;
+     case 't':
+        noStroke();
+     fill(0,random(255),0);
+     rect(mouseX,mouseY,10,10);
+     break;
+     case 'y':
+        noStroke();
+     fill(0,0,random(255));
+     rect(mouseX,mouseY,10,10);
+     break;
+     case 'u':
+        noStroke();
+     fill(random(255),random(255),random(255));
+     rect(mouseX,mouseY,10,10);
+     break;
+  case 'e':
+    println("2");  // erase with bg color
+    fill(255);
+    eraser(bgc,mouseX, mouseY,25);
+    break;
+  default:             // Default executes if the case labels
+    println("None");   // don't match the switch parameter
+    break;
+  }
+
+  }
+
+  void drawline(color k, int lx,int ly, int px,int py) {
+   // strokeWeight(1);
+    stroke(k);
+    line(lx, ly, px, py);
+  }
+
+  void drawFatLine(color k, int lx,int ly, int px,int py) {
+    strokeWeight(10);
+    stroke(k);
+    line(lx, ly, px, py);
+  }
+
+
+  void eraser(color k,int lx,int ly,int sz) {
+    stroke(k);
+    ellipse(lx, ly, sz,sz);
+  }
+
+
+  void clear_print() {
+
+  // these 2 options let you choose between clearing the background
+  // and saveing the current image as a file.
+    if (key == 'x' || key == 'X') {
+       background(255);
+    } else if (key == 'p' || key == 'P') {
+       saveFrame("x_xxx_####.png");
+       //this will save the name as the intials and a random counting number.
+       // it will always be larger in value then the last one.
+       delay(500);
+    }
+  }

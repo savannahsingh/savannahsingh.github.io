@@ -1,0 +1,137 @@
+var value = 0;
+
+            var tCounter = 0;
+
+            var b;
+
+            var f;
+
+            // PFont f;
+
+            var x = 0;
+
+            function setup() {
+              createCanvas(800, 800);
+              noStroke();
+              rectMode(CENTER);
+
+              b = loadImage("img/2corgi.jpg");
+              f = loadFont("asset/GOTHIC.ttf");
+
+            }
+
+
+
+
+            function draw() {
+
+              background(255-value);
+              fill(value,0 ,0);
+              ellipse(width/2, height/2, 400, 400);
+            image(b, 0, 0, width, height);
+
+              fill(value, 0, 0);
+              rect(200, 400, 50, tCounter);
+
+                fill(value, 0, 0);
+              rect(600, 400, 50, tCounter);
+
+              for ( var value = 0; value < width; value += 32 ) {
+                fill(mouseX, mouseY, 100, 100);
+                rect(value, height/4, 20, height);
+                // tvar(255, 50);
+                image(b, mouseX, mouseY);
+              }
+
+            blendMode(OVERLAY);
+            filter(GRAY);
+              value++;
+
+              if ( value > 255) {
+                value = 0;
+              }
+
+              fill(value, 204, 0);
+              rect(mouseX, height/2, mouseY/2+10, mouseY/2+5);
+              fill(value, 204, 0);
+
+
+
+              //prvarArray(PFont.list());
+
+              textFont(f);
+               if ( mouseIsPressed && keyPressed == true )
+              fill(0, random(255), random(255));
+              text("Send Help", 120, tCounter);
+
+              tCounter ++;
+              if (tCounter > width) {
+                tCounter = -10;
+            }
+
+
+              fill(50, 30, 0);
+              rect(0, 0, width, height);
+              textAlign(CENTER);
+              myDrawType("Hello", mouseX, 200);
+
+               circle(width*1, height*0.5, 200, 10);
+               circle(width*0, height*0.5, 200, 10);
+               circle(width*0.5, height*1, 200, 10);
+               circle(width*0.5, height*0, 200, 10);
+
+              //if (x < 900) {
+              //  line(x, 0, x, 1);
+              //  x = x + 1;
+              //} else {
+              //  noLoop();
+              //  exit();
+              //}
+              //saveFrame("line-#####.png");
+            }
+
+            function circle( lox,  loy,  createCanvas,  x) {
+              var a = createCanvas/x;
+              for (var i = 0; i < x; i++) {
+                fill(random(255),random(255),random(255));
+                ellipse(lox, loy, createCanvas - i*a, createCanvas - i*a);
+              }
+
+            }
+
+            function keyPressed() {
+
+              if ( key == 'b' || key == 'B' ) {
+                // example of toggle logic
+                stroke(1);
+                strokeWeight(3);
+                line(mouseX, mouseY, pmouseX, pmouseY);
+              } else {
+                stroke(6);
+                strokeWeight(10);
+              }
+            }
+
+
+            function mouseMoved() {
+              value = value + 1;
+              if (value > 255) {
+                value = 0;
+              }
+            }
+
+
+                   function ssDrawText(s,  lx,  ly,  c ) {
+                  fill(c);
+                  text(s, lx, ly,20);
+                }
+
+
+
+                function myDrawType( s,  x,  y ) {
+              fill(255, 0, 0);
+              text(s, x, y);
+              fill(200, 0, 0);
+              rect(x, y, 5, 5);
+            }
+

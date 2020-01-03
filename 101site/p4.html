@@ -45,6 +45,7 @@
         <li><a class="navbar-link" href="p2.html">Project 2</a></li>
         <li><a class="navbar-link" href="p3.html">Project 3</a></li>
         <li><a class="navbar-link" href="p4.html">Project 4</a></li>
+        <li><a class="navbar-link" href="p5.html">Project 5</a></li>
       </ul>
     </div>
   </nav>
@@ -81,34 +82,38 @@
       <div class="four columns">
         <div class="scroll">
           <pre>
-var gridarr = [
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-  [0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1],
-  [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-  [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-  [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-  [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-  [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0],
-  [0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0],
-  [0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0]
-  ];
+            var gridarr = [
+                  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                  [0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                  [0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                  [0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                  [0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                  [0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                  [1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+                  [0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1],
+                  [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                  [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+                  [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+                  [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+                  [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0],
+                  [0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0],
+                  [0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0]
+                  ];
+
+
 
                   var a = 0;
 
                   function setup() {
 
-                  createCanvas(500, 500);
+                  createCanvas(1500, 800);
 
                   background(50);
 
-                  for (var i = 0; i < 16; i++) {
+
+                  function drawarray(fade) {
+                   for (var i = 0; i < 16; i++) {
                           for (var j = 0; j < 16; j++) {
                             a = gridarr[i][j];
                                 if (a === 1) {
@@ -126,8 +131,34 @@ var gridarr = [
                             rect((j * 30) + 15, (i * 30) + 15, 20, 20);
                           }
                       }
-                  }
 
+            }
+            push();
+                translate(20, 20);
+                drawarray(255);
+
+                pop();
+
+                push();
+                translate(850, 20);
+                rotate(radians(45));
+                drawarray(255);
+                pop();
+
+                push();
+                    translate(900, 700);
+                    rotate(radians(-45));
+                    scale(.3);
+                    drawarray(100);
+                    pop();
+
+                    push();
+                        translate(1000, 150);
+                        rotate(radians(-65));
+                        scale(.5);
+                        drawarray(100);
+                        pop();
+                  }
 
          </pre>
         </div>
@@ -136,8 +167,8 @@ var gridarr = [
       <div class="four columns">
         <h5>Sketch 6</h5>
         <p>
-        For this sketch,
-        <p> <a href="code/sketch3.txt">Code </a> </p>
+        For this sketch, I made an array of a corgi and then I used push and pop to rotate and scale it.
+        <p> <a href="code/sketch6.txt">Code </a> </p>
         <!--  <a class="show-popup" href="#" data-showpopup="1" >run sketch</a> -->
         <!-- <a href="video/sketch1animation.mp4">play video</a> <br>
         <a href="code/p1ex1/p1ex1.txt">see code</a> <br> -->
@@ -408,8 +439,9 @@ var gridarr = [
       <div class="four columns">
         <h5>Sketch 7</h5>
         <p>
-          For this sketch,
-              <p> <a href="code/sketch4.txt">Code </a> </p>
+          For this sketch, my partner and I worked on making a disco with several people wearing different
+          hats.
+              <p> <a href="code/sketch7.txt">Code </a> </p>
         <!--  <a class="show-popup" href="#" data-showpopup="1" >run sketch</a> -->
         <!-- <a href="video/sketch2animation.mp4">play video</a> <br>
         <a href="code/p1ex2/p1ex2.txt">see code</a> <br> -->
@@ -433,98 +465,89 @@ var gridarr = [
 
       <div class="four columns">
 
-        <a href="clock/clock/index.html"> <img src="images/clock.png" class="u-full-width"> </a>
+        <a href="np4/index.html"> <img src="images/datavis.png" class="u-full-width"> </a>
       </div>
 
       <div class="four columns">
         <div class="scroll">
           <pre>
-            let t = 0;
+            const CHART = document.getElementById("pokeChart");
+            console.log(Chart.defaults.scale.ticks);
 
-            function setup() {
-              createCanvas(1000, 1000);
-              angleMode(DEGREES);
-            }
-
-            function draw() {
-
-              fill(0, 0, 10,3);
-              ellipse(500,500,990,990)
-              translate(width/2, height/2);
-              rotate(-180);
-
-              let hr = hour();
-              let mn = minute();
-              let sc = second();
-
-              strokeWeight(8);
-              stroke(233,117, 255,10);
-              let secondAngle = map(sc, 0, 60, 0, 360);
+            var i = 0;
+            var pikachu;
+            var bulbasaur;
+            var charmander;
+            var squirtle;
 
 
-              stroke(130, 140, 255,10);
-              let minuteAngle = map(mn, 0, 60, 0, 360);
-
-
-              stroke(117, 255, 255, 10);
-              let hourAngle = map(hr % 12, 0, 12, 0, 360);
-
-
-
-              push();
-              rotate(secondAngle);
-            stroke(233,117, 255,10);
-              triangle(secondAngle, 250, secondAngle, 25);
-              pop();
-
-              push();
-              rotate(minuteAngle);
-              stroke(130, 140, 255);
-              triangle(minuteAngle, 350, minuteAngle, 50);
-              pop();
-
-              push();
-              rotate(hourAngle);
-              stroke(117, 255, 255);
-              triangle(hourAngle, 450, hourAngle, 100);
-              pop();
-
-
-
-
-
-
-               if (mouseIsPressed) {
-               rotate(180);
-                  fill(255);
-                  noStroke();
-                  textSize(36);
-                  text(hr + ':' + mn + ':' + sc, 0, 150);
-
-            isAMPM();
-
-
+            function preload() {   // using this as its good for local or remote data fetching
+               loadJSON('https://pokeapi.co/api/v2/pokemon/pikachu/', getpikachu);
+               loadJSON('https://pokeapi.co/api/v2/pokemon/bulbasaur/', getbulbasaur);
+               loadJSON('https://pokeapi.co/api/v2/pokemon/charmander/', getcharmander);
+               loadJSON('https://pokeapi.co/api/v2/pokemon/squirtle/', getsquirtle);
              }
 
+            let pokeChart = new Chart (CHART, {
+              type: 'radar',
+              data:  {
+                labels: ['HP', 'Attack', 'Defense', 'S. Attack', 'S. Defense', 'Speed'],
+                datasets: [
+                  {
+                    label: 'Pikachu',
+                    backgroundColor: 'rgba(255, 251, 0,  0.1)',
+                    borderColor: 'rgb(255, 251, 0)',
+                    borderWidth: 2,
+                    data: [90, 39, 55, 32, 74, 49]
+                  }, {
+                    label: 'Charmander',
+                    backgroundColor: 'rgba(255, 0, 0,  0.1)',
+                    borderColor: 'rgb(255, 0, 0)',
+                    borderWidth: 2,
+                    data: [65, 32, 55, 87, 44, 27]
+                  }, {
+                    label: 'Squirtle',
+                    backgroundColor: 'rgba(0, 62, 255, 0.1)',
+                    borderColor: 'rgb(0, 62, 255)',
+                    borderWidth: 2,
+                    data: [45, 87, 27, 99, 63, 10]
+                  }, {
+                    label: 'Bulbasaur',
+                    backgroundColor: 'rgba(100, 255, 0, 0.1)',
+                    borderColor: 'rgb(100, 255, 0)',
+                    borderWidth: 2,
+                    data: [35, 76, 34, 14, 88, 100]
+                  }
+                ]
+              }
+            });
+            //
+            function getpikachu (data) {
+            pikachu = data;
+            console.log(pikachu);
             }
 
-            function isAMPM (hr) {
-            let tod;
-            if (hr < 12) {  //its AM
-             tod = "AM";
-             fill(230,255,90);
-             ellipse(0,0, 50,50);
-
-
-            } else { //otherwise PM
-             tod = "PM";
-             fill(255);
-             ellipse(0,0,50,50);
-             fill(0,0,10);
-             ellipse(10,-10,30,30);
+            function getbulbasaur (data) {
+            bulbasaur = data;
+            console.log(bulbasaur);
             }
-            return tod;
+
+            function getcharmander (data) {
+            charmander = data;
+            console.log(charmander);
             }
+
+            function getsquirtle (data) {
+            squirtle = data;
+            console.log(squirtle);
+            }
+
+            function stats (object) {
+              object.stats[1].name;
+              console.log(object.stats[1].base_stat);
+
+            }
+
 </pre>
         </div>
 
@@ -534,8 +557,9 @@ var gridarr = [
       <div class="four columns">
         <h5>Project 4</h5>
         <p>
-        For project 4,
-              <p> <a href="code/p_2.txt">Code </a> </p>
+        For project 4, I attempted to use the Pokemon API. I used it to grab the numbers of a few pokemon's stats. I placed
+        the numbers it grabbed into a chart that is similar to the one used in the game.
+              <p> <a href="code/project4.txt">Code </a> </p>
                      <br>
 
 
