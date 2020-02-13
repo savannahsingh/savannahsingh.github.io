@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<!-- A-Frame Image documentation: https://aframe.io/docs/1.0.0/primitives/a-image.html -->
+<!-- Build a basic scene tut is very helpful: https://aframe.io/docs/1.0.0/guides/building-a-basic-scene.html#sidebar-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Demo</title>
+  <script src="aframe.min.js"></script>
+  <script src="aframe-ar.js"></script>
+</head>
+
+<body>
+  <a-scene embedded="" arjs="debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
+
+
+    <a-assets>
+      <img id="corgi" src="assets/corgiimg.jpg">
+      <!-- <img id="corg" src="assets/corganim.gif"> -->
+      <video id="anim" autoplay loop="true" src="assets/corg.mp4"></video>
+    </a-assets>
+
+
+    <a-marker type="barcode" value="5">
+      <!-- Using the asset management system. -->
+      <a-image src="#corgi" width="3" height="3" rotation="90 0 0"></a-image>
+      <!-- Defining the URL inline. Not recommended but more comfortable for web developers. -->
+      <!-- <a-image src="assets/cat_in_cat.png"></a-image> -->
+    </a-marker>
+    <a-marker type="barcode" value="3">
+      <!-- Using the asset management system.
+    Note the width and height keep your image size in proportion. Position is calculated in "meters" -->
+      <a-video src="#anim" width="3" height="3" rotation="90 0 0" position="0 2 0"></a-video>
+      <!-- Defining the URL inline. Not recommended but more comfortable for web developers. -->
+      <!-- <a-image src="assets/assets/PLUR.jpg"></a-image> -->
+    </a-marker>
+    <a-entity camera=""></a-entity>
+  </a-scene>
+
+
+</body>
+
+</html>
