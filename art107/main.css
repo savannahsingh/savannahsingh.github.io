@@ -1,0 +1,47 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Century Gothic";
+  line-height: 1.5;
+  padding: 30px 20px;
+  text-align: center;
+    background-color: rgb(240, 240, 240)
+}
+
+h1 {
+  padding: 20px 0px 10px 0px;
+  font-size: ;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 26.4px;
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+h5 {
+  text-align: center;
+}
+
+p {
+  font-family: "Century Gothic";
+  text-align: center;
+}
+
+canvas {
+  display: block;
+}
+
+li {
+  font-family: "Century Gothic";
+}
+
+div.desc {
+  font-family: "Century Gothic";
+}
